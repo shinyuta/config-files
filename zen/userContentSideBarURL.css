@@ -1,11 +1,12 @@
 /* Catppuccin Mocha Rosewater userContent.css*/
+/* updated to match rose-pine */
 
 @media (prefers-color-scheme: dark) {
 
   /* Common variables affecting all pages */
   @-moz-document url-prefix("about:") {
     :root {
-      --in-content-page-color: #E8BAB8 !important;
+      --in-content-page-color: #cdd6f4 !important;
       --color-accent-primary: #e0def4 !important;
       --color-accent-primary-hover: rgb(251, 243, 241) !important;
       --color-accent-primary-active: rgb(245, 231, 221) !important; 
@@ -22,8 +23,8 @@
       --newtab-background-color: #191724 !important;
       --newtab-background-color-secondary: #313244 !important;
       --newtab-element-hover-color: #313244 !important;
-      --newtab-text-primary-color: #E8BAB8 !important;
-      --newtab-wordmark-color: #E8BAB8 !important;
+      --newtab-text-primary-color: #cdd6f4 !important;
+      --newtab-wordmark-color: #cdd6f4 !important;
       --newtab-primary-action-background: #e0def4 !important;
     }
 
@@ -64,7 +65,7 @@
   @-moz-document url-prefix("about:preferences") {
     :root {
       --zen-colors-tertiary: #191724 !important;
-      --in-content-text-color: #E8BAB8 !important;
+      --in-content-text-color: #cdd6f4 !important;
       --link-color: #e0def4 !important;
       --link-color-hover: rgb(251, 243, 241) !important;
       --zen-colors-primary: #313244 !important;
@@ -79,7 +80,7 @@
     button,
     groupbox menulist {
       background: #313244 !important;
-      color: #E8BAB8 !important;
+      color: #cdd6f4 !important;
     }
 
     .main-content {
@@ -105,9 +106,9 @@
       --cryptominer-color: #b4befe !important;
       --tracker-color: #a6e3a1 !important;
       --in-content-primary-button-background-hover: rgb(81, 83, 105) !important;
-      --in-content-primary-button-text-color-hover: #E8BAB8 !important;
+      --in-content-primary-button-text-color-hover: #cdd6f4 !important;
       --in-content-primary-button-background: #45475a !important;
-      --in-content-primary-button-text-color: #E8BAB8 !important;
+      --in-content-primary-button-text-color: #cdd6f4 !important;
     }
 
 
