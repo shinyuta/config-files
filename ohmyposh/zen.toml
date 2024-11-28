@@ -1,0 +1,59 @@
+version = 3
+final_space = true
+
+[palette]
+  rose = '#ebbcba'
+  closer = 'p:os'
+  teal = '#56949f'
+  os = '#ACB0BE'
+  lavender = '#c4a7e7'
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+
+  [[blocks.segments]]
+    style = 'plain'
+    template = ' {{ .UserName }} '
+    foreground = 'p:rose'
+    type = 'session'
+
+  [[blocks.segments]]
+    style = 'plain'
+    template = '{{ .Path }} '
+    foreground = 'p:lavender'
+    type = 'path'
+
+    [blocks.segments.properties]
+      folder_icon = '....'
+      home_icon = '~'
+      style = 'agnoster_short'
+
+  [[blocks.segments]]
+    style = 'plain'
+    template = '{{ .HEAD }} '
+    foreground = 'p:teal'
+    type = 'git'
+
+    [blocks.segments.properties]
+      branch_icon = ' '
+      cherry_pick_icon = ' '
+      commit_icon = ' '
+      fetch_status = false
+      fetch_upstream_icon = false
+      merge_icon = ' '
+      no_commits_icon = ' '
+      rebase_icon = ' '
+      revert_icon = ' '
+      tag_icon = ' '
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    style = 'plain'
+    template = ' 󰄛  '
+    foreground = 'p:closer'
+    type = 'text'
