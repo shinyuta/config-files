@@ -1,11 +1,7 @@
-eval "$(oh-my-posh init zsh --config ~/dotfiles/ohmyposh/zen.toml)"
-
 export ZSH="$HOME/.oh-my-zsh"
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
-# ------ NIX/HOME-MANAGER ---------
-alias swh="/nix/store/47kmhrlyxpvf9a8alfzsfy4cj6sy9r4n-home-manager-0-unstable-2024-10-20/bin/home-manager switch"
+eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/zen.toml)"
 
 # ---- FZF -----
 # Set up fzf key bindings and fuzzy completion
@@ -31,6 +27,8 @@ export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git
 
 export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
+
+alias fs='nvim $(fzf --preview="bat --color=always {}" -m)'
 
 # Advanced customization of fzf options via _fzf_comprun function
 # - The first argument to the function is the name of the command.
@@ -67,7 +65,10 @@ eval "$(zoxide init zsh)"
 alias cd="z"
 
 # ------- TMUX ---------
+export PATH="$HOME/.tmuxifier/bin:$PATH"
 alias tmuxk="tmux kill-session"
 alias tmuxifire="tmuxifier load-session coding"
 
-
+# ------- zsh ---------
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
