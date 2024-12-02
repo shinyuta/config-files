@@ -1,5 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
+export EZA_COLORS="di=38;5;148:ln=38;5;81:*.java=38;5;81:*.css=38;5;81:*.lua=38;5;81:*.class=38;5;81:*.md=38;5;81:*.py=38;5;81"
 
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/zen.toml)"
 
@@ -67,6 +68,7 @@ alias cd="z"
 # ------- TMUX ---------
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 alias tmuxk="tmux kill-session"
+alias tmuxa="tmux attach"
 alias tmuxifire="tmuxifier load-session coding"
 
 # ------- zsh ---------

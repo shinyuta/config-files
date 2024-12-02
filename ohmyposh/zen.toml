@@ -2,11 +2,14 @@ version = 3
 final_space = true
 
 [palette]
-  rose = '#ebbcba'
+  rose = '#FD77DD'
+  # rose = '#ebbcba'
   closer = 'p:os'
-  teal = '#56949f'
+  teal = '#A9DD48'
+  # teal = '#56949f'
   os = '#ACB0BE'
-  lavender = '#c4a7e7'
+  lavender = '#54C1DB'
+  # lavender = '#c4a7e7'
 
 [[blocks]]
   type = 'prompt'

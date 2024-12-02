@@ -44,6 +44,7 @@ default=(
 sketchybar --default "${default[@]}"
 
 # --- LEFT SIDE ITEMS -----
+source $ITEM_DIR/month.sh
 source $ITEM_DIR/aerospace.sh
 source $ITEM_DIR/front_app.sh
 
@@ -52,7 +53,6 @@ source $ITEM_DIR/media.sh
 
 # --- RIGHT SIDE ITEMS -----
 source $ITEM_DIR/time.sh
-source $ITEM_DIR/month.sh
 source $ITEM_DIR/volume.sh
 source $ITEM_DIR/battery.sh
 source $ITEM_DIR/cpu.sh

@@ -1,0 +1,9 @@
+colors:
+  directories: 38;5;148   # Set directories to green
+  symlinks: 38;5;81       # Set symlinks to blue
+  *.java: 38;5;81         # Set .java files to blue
+  *.css: 38;5;81          # Set .css files to blue
+  *.lua: 38;5;81          # Set .lua files to blue
+  *.class: 38;5;81        # Set .class files to blue
+  *.md: 38;5;81           # Set .md files to blue
+

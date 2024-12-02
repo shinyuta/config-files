@@ -5,9 +5,9 @@ source "$CONFIG_DIR/colors.sh" # Ensure colors are properly sourced
 
 if [ "$1" = "$FOCUSED_WORKSPACE" ]; then
     sketchybar --set $NAME \
-        label.color=0xffe0def4 \  # Active color
+        label.color=$GREEN \  # Active color
         background.color=$BAR_COLOR
 else
     sketchybar --set $NAME \
-        label.color=0xff575279 \  # Inactive color
+        label.color=$DIM \  # Inactive color
 fi
