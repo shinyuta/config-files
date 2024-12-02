@@ -1,3 +1,7 @@
+# JINX, NEW COLORSCHEME:
+
+![images](./RM-images/jinx.png)
+
 # Iterm/Sketchybar/Tmux:
 
 ![images](./RM-images/iterm.png)
