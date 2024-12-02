@@ -13,6 +13,7 @@ for sid in $(aerospace list-workspaces --all); do
     sketchybar --add item space.$sid left \
         --subscribe space.$sid aerospace_workspace_change \
         --set space.$sid \
+        label.font="JetBrainsMono Nerd Font:Regular:15.0" \
         background.corner_radius=5 \
         background.height=20 \
         background.drawing=off \
