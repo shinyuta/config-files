@@ -162,7 +162,7 @@ if.app-id = 'com.googlecode.iterm2'
 run = "move-node-to-workspace 2"
 
 [[on-window-detected]]
-if.app-id = 'com.hnc.Discord'
+if.app-id = 'com.apple.finder'
 run = "move-node-to-workspace 3"
 
 [[on-window-detected]]
@@ -170,10 +170,9 @@ if.app-id = 'com.smartcodeltd.stremio'
 run = "move-node-to-workspace 4"
 
 [[on-window-detected]]
-if.app-id = 'com.apple.finder'
+if.app-id = 'com.hnc.Discord'
 run = "move-node-to-workspace 5"
 
 [[on-window-detected]]
 if.app-id = 'com.apple.systempreferences'
 run = "move-node-to-workspace 6"
-
