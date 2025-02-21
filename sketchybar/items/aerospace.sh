@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CONFIG_DIR="$HOME/.config/sketchybar"
-LABELS=("" "" "" "" "" "" "" "") # Adjust these as needed
+LABELS=("" "" "" "" "" "" "" "") # Adjust these as needed
 INDEX=0
 
 sketchybar --add event aerospace_workspace_change

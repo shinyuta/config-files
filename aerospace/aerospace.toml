@@ -158,19 +158,27 @@ if.app-id = 'org.mozilla.com.zen.browser'
 run = "move-node-to-workspace 1"
 
 [[on-window-detected]]
+if.app-id = 'com.apple.Safari'
+run = "move-node-to-workspace 1"
+
+[[on-window-detected]]
 if.app-id = 'com.googlecode.iterm2'
 run = "move-node-to-workspace 2"
 
 [[on-window-detected]]
-if.app-id = 'com.apple.finder'
+if.app-id = 'com.apple.mobilenotes'
 run = "move-node-to-workspace 3"
 
 [[on-window-detected]]
-if.app-id = 'com.smartcodeltd.stremio'
+if.app-id = 'com.apple.finder'
 run = "move-node-to-workspace 4"
 
 [[on-window-detected]]
-if.app-id = 'com.hnc.Discord'
+if.app-id = 'com.smartcodeltd.stremio'
+run = "move-node-to-workspace 5"
+
+[[on-window-detected]]
+if.app-id = 'fm.poolside.mobile'
 run = "move-node-to-workspace 5"
 
 [[on-window-detected]]
