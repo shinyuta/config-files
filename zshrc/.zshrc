@@ -47,9 +47,9 @@ _fzf_comprun() {
 }
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
   --color=fg:#d0d0d0,fg+:#d0d0d0,bg:-1,bg+:#262626
-  --color=hl:#af8685,hl+:#ebbcba,info:#907aa9,marker:#ebbcba
-  --color=prompt:#ebbcba,spinner:#907aa9,pointer:#907aa9,header:#907aa9
-  --color=border:#262626,label:#aeaeae,query:#d9d9d9
+  --color=hl:#b6539e,hl+:#FD77DD,info:#A9DD48,marker:#A9DD48
+  --color=prompt:#A9DD48,spinner:#A9DD48,pointer:#54C1DB,header:#FD77DD
+  --color=border:#262626,label:#aeaeae,query:#FDEEFC
   --border="sharp" --border-label="" --preview-window="border-rounded" --prompt=" "
   --marker="|" --pointer="󰄛" --separator="─" --scrollbar="│"
   --layout="reverse" --info="right"'
@@ -66,10 +66,17 @@ eval "$(zoxide init zsh)"
 alias cd="z"
 
 # ------- TMUX ---------
-export PATH="$HOME/.tmuxifier/bin:$PATH"
+export PATH="$HOME/.config/tmuxifier/bin:$PATH"
 alias tmuxk="tmux kill-session"
 alias tmuxa="tmux attach"
 alias tmuxifire="tmuxifier load-session coding"
+
+# ------- FUCK --------
+eval $(thefuck --alias)
+alias fk="fuck"
+
+# -------- YAZI ---------
+export YAZI_CONFIG_HOME="$HOME/.config/yazi"
 
 # ------- zsh ---------
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh

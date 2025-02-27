@@ -1,0 +1,5 @@
+[manager]
+theme = "theme.toml"
+
+[preview]
+clear_on_exit = true

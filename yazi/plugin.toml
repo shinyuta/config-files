@@ -1,0 +1,8 @@
+[preview]
+pdf = "mutool draw -o {temp_dir}/page.png {file} 1 && wezterm imgcat {temp_dir}/page.png"
+image = "wezterm imgcat {file}"
+zip = "lsar {file}"
+rar = "unrar l {file}"
+tar = "tar -tf {file}"
+gz  = "tar -tzf {file}"
+7z  = "7z l {file}"

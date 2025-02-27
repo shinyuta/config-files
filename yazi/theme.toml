@@ -1,0 +1,21 @@
+[Colors]
+Background = "#1E1E2E"    # Dark background
+Foreground = "#FDEEFC"    # Pink text (foam)
+SelectionBackground = "#FD77DD"  # Pink selection bg
+SelectionForeground = "#1E1E2E"  # Dark selection text
+
+# Accent Colors
+Info = "#54C1DB"    # Blue (gold)
+Warning = "#A9DD48" # Green (pine)
+Error = "#FD77DD"   # Pink (foam)
+
+# Borders & UI Elements
+Border = "#54C1DB"        # Blue for borders
+CursorLine = "#A9DD48"    # Green for cursor line
+StatusLineBackground = "#FD77DD" # Pink statusline
+StatusLineForeground = "#1E1E2E" # Dark statusline text
+
+# File Highlights
+Directory = "#54C1DB"  # Blue (gold) for directories
+Executable = "#A9DD48" # Green (pine) for executables
+Symlink = "#FD77DD"    # Pink (foam) for symlinks
