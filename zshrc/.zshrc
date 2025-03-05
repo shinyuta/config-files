@@ -4,6 +4,8 @@ export EZA_COLORS="di=38;5;148:ln=38;5;81:*.java=38;5;81:*.css=38;5;81:*.lua=38;
 
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/zen.toml)"
 
+export PATH="$(brew --prefix ruby)/bin:$PATH"
+
 # ---- FZF -----
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
@@ -60,6 +62,7 @@ BAT_THEME="Catppuccin Mocha"
 # ------ EZA/LS -------
 alias ls="eza --color=always -G --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias lst="eza --icons=always -1 -T --level=2"
+alias lsl="eza -l"
 
 # ------ ZOXIDE/CD ------
 eval "$(zoxide init zsh)"
@@ -81,3 +84,4 @@ export YAZI_CONFIG_HOME="$HOME/.config/yazi"
 # ------- zsh ---------
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export PATH="$(brew --prefix ruby)/bin:$PATH"
