@@ -1,0 +1,43 @@
+# ===== Background and Foreground Colors =====
+background = 000000
+foreground = feffff
+
+# ===== Transparency and Blur =====
+background-opacity = 0.35
+background-blur = 25
+
+# ===== Selection Colors =====
+selection-background = 444444
+selection-foreground = feffff
+
+# ===== Cursor Appearance =====
+cursor-style = block
+cursor-style-blink = true
+cursor-invert-fg-bg = true
+cursor-color = feffff
+cursor-text = feffff
+shell-integration-features = no-cursor
+
+# ===== Color Palette Overrides =====
+palette = 1=ec6786
+palette = 2=a9dd48
+palette = 7=feffff
+palette = 8=767676
+
+# ===== Minimum Contrast (for legibility) =====
+minimum-contrast = 1.5
+
+# ===== macOS Window Appearance =====
+macos-titlebar-style = hidden
+macos-window-shadow = false
+
+# ===== Font Settings =====
+font-family = JetBrainsMono Nerd Font
+font-family-bold = JetBrains Mono
+font-family-italic = JetBrains Mono
+font-family-bold-italic = JetBrains Mono
+font-size = 20
+
+# ===== Behavior =====
+mouse-hide-while-typing = true
+scrollback-limit = 524288
