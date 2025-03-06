@@ -41,3 +41,9 @@ font-size = 20
 # ===== Behavior =====
 mouse-hide-while-typing = true
 scrollback-limit = 524288
+
+# ===== KEYBINDS =====
+keybind = global:cmd+s=toggle_quick_terminal
+keybind = ctrl+v=new_split:right
+keybind = ctrl+x=close_surfacekeybind = ctrl+h=goto_split:left
+keybind = ctrl+l=goto_split:right
