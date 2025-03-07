@@ -1,19 +1,11 @@
-# JINX, NEW COLORSCHEME:
+# Jinx Colorscheme Dashboard:
 
-![images](./RM-images/jinx.png)
+![images](./RM-images/dashboard.png)
 
-# Iterm/Sketchybar/Tmux:
+# Ghostty Terminal:
 
-![images](./RM-images/iterm.png)
+![images](./RM-images/terminal.png)
 
-# Zen Browser/Sketchybar:
-
-![images](./RM-images/zen.png)
-
-# Audio Playing (Sketchybar module):
-
-![images](./RM-images/audio.png)
-
-# FZF:
+# Fuzzy Finder:
 
 ![images](./RM-images/fzf.png)
