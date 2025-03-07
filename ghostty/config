@@ -30,6 +30,7 @@ minimum-contrast = 1.5
 # ===== macOS Window Appearance =====
 macos-titlebar-style = hidden
 macos-window-shadow = false
+macos-icon = xray
 
 # ===== Window Padding =====
 window-padding-x = 0
@@ -37,7 +38,7 @@ window-padding-y = 0
 
 # ===== Font Settings =====
 font-family = "Roboto Mono"
-font-size = 23
+font-size = 24
 
 # ===== Behavior =====
 mouse-hide-while-typing = true
@@ -61,7 +62,7 @@ custom-shader-animation = true
 # custom-shader = shaders/animated-gradient-shader.glsl
 # custom-shader = shaders/bettercrt.glsl
 # custom-shader = shaders/bloom.glsl
-custom-shader = shaders/bloom1.glsl
+# custom-shader = shaders/bloom1.glsl
 # custom-shader = shaders/pixels.glsl
 # custom-shader = shaders/bloom075.glsl
 # custom-shader = shaders/bloom060.glsl

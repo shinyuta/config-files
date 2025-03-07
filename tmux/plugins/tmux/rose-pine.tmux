@@ -45,7 +45,7 @@ main() {
     local theme
     theme="$(get_tmux_option "@rose_pine_variant" "")"
 
-    # INFO: Not removing the thm_hl_low and thm_hl_med colors for posible features
+    # INFO: Not removing the thm_hl_low and thm_hl_med colors for possible features
     # INFO: If some variables appear unused, they are being used either externally
     # or in the plugin's features
     if [[ $theme == main ]]; then
@@ -171,9 +171,9 @@ main() {
     window_directory="$(get_tmux_option "@rose_pine_show_pane_directory" "")"
     readonly window_directory
 
-    local window_separator 
+    local window_separator
     window_separator="$(get_tmux_option "@rose_pine_window_separator" "")"
-    readonly window_separator 
+    readonly window_separator
 
     local default_window_behavior
     default_window_behavior="$(get_tmux_option "@rose_pine_default_window_behavior" "")"
@@ -344,7 +344,7 @@ main() {
     local right_column
 
     # This if statement allows the bg colors to be null if the user decides so
-    # It sets the base colors for active / inactive, no matter the window appearence switcher choice
+    # It sets the base colors for active / inactive, no matter the window appearance switcher choice
     # TEST: This needs to be tested further
     if [[ "$bar_bg_disable" == "on" ]]; then
         set status-style "fg=$thm_pine,bg=$bar_bg_disabled_color_option"
@@ -358,7 +358,7 @@ main() {
         set message-style "fg=$thm_muted,bg=$bar_bg_disabled_color_option"
     fi
 
-    # Window appearence switcher: 3 options for the user
+    # Window appearance switcher: 3 options for the user
     if [[ "$window_separator" != "" ]] ; then
         window_status_format=$custom_window_sep
         window_status_current_format=$custom_window_sep_current
