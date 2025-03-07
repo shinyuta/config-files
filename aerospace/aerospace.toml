@@ -165,15 +165,15 @@ if.app-id = 'com.mitchellh.ghostty'
 run = "move-node-to-workspace 2"
 
 [[on-window-detected]]
-if.app-id = 'com.apple.mobilenotes'
+if.app-id = 'com.apple.finder'
 run = "move-node-to-workspace 3"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.mobilenotes'
+run = "move-node-to-workspace 4"
 
 [[on-window-detected]]
 if.app-id = 'com.apple.mobilecal'
-run = "move-node-to-workspace 3"
-
-[[on-window-detected]]
-if.app-id = 'com.apple.finder'
 run = "move-node-to-workspace 4"
 
 [[on-window-detected]]

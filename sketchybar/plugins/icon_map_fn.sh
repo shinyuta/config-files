@@ -161,7 +161,7 @@ function icon_map() {
   "GitHub Desktop")
     icon_result=":git_hub:"
     ;;
-  "Firefox")
+  "Zen")
     icon_result=":firefox:"
     ;;
   "Slack")
