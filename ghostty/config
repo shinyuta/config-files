@@ -1,10 +1,10 @@
 # ===== Background and Foreground Colors =====
-background = 110F14
-foreground = FDEEFC
+background = 000000
+foreground = feffff
 
 # ===== Transparency and Blur =====
-background-opacity = 0.35
-background-blur = 25
+background-opacity = 0.50
+background-blur = 15
 
 # ===== Selection Colors =====
 selection-background = 444444
@@ -21,7 +21,7 @@ shell-integration-features = no-cursor
 # ===== Color Palette Overrides =====
 palette = 1=ec6786
 palette = 2=a9dd48
-palette = 7=FDEEFC
+palette = 7=feffff
 palette = 8=767676
 
 # ===== Minimum Contrast (for legibility) =====
@@ -31,12 +31,13 @@ minimum-contrast = 1.5
 macos-titlebar-style = hidden
 macos-window-shadow = false
 
+# ===== Window Padding =====
+window-padding-x = 0
+window-padding-y = 0
+
 # ===== Font Settings =====
-font-family = JetBrainsMono Nerd Font
-font-family-bold = JetBrains Mono
-font-family-italic = JetBrains Mono
-font-family-bold-italic = JetBrains Mono
-font-size = 20
+font-family = "Roboto Mono"
+font-size = 23
 
 # ===== Behavior =====
 mouse-hide-while-typing = true
@@ -44,22 +45,28 @@ scrollback-limit = 524288
 
 # ===== KEYBINDS =====
 keybind = global:cmd+s=toggle_quick_terminal
+keybind = ctrl+v=new_split:right
 keybind = ctrl+x=close_surface
 
+# custom-shader = /Users/yutakirihara/.config/ghostty/shaders/bloom.glsl
 custom-shader-animation = true
 
 # Some shaders can be found in this repo, they're usually uploaded to discord
 # https://github.com/hackrmomo/ghostty-shaders
 # custom-shader = shaders/scanline.glsl
+# custom-shader = shaders/galaxy.glsl
+# custom-shader = shaders/in-game-crt.glsl
+# custom-shader = shaders/cineShader-Lava.glsl
+
 # custom-shader = shaders/animated-gradient-shader.glsl
 # custom-shader = shaders/bettercrt.glsl
 # custom-shader = shaders/bloom.glsl
-custom-shader = shaders/bloom1.glsl
+# custom-shader = shaders/bloom1.glsl
 # custom-shader = shaders/pixels.glsl
-# custom-shader = shaders/bloom075.glsl
+custom-shader = shaders/bloom075.glsl
 # custom-shader = shaders/bloom060.glsl
-custom-shader = shaders/bloom025.glsl
 # custom-shader = shaders/bloom050.glsl
+# custom-shader = shaders/bloom025.glsl
 # custom-shader = shaders/crt.glsl
 # custom-shader = shaders/cubes.glsl
 # custom-shader = shaders/dither.glsl
