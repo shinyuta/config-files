@@ -19,7 +19,7 @@
         {
           "type": "status",
           "style": "plain",
-          "template": "{{ if gt .Code 0 }} ❌{{else}} ✔{{ end }} ",
+          "template": "{{ if gt .Code 0 }} {{else}} ✔{{ end }} ",
           "foreground": "p:lime",
           "foreground_templates": ["{{ if gt .Code 0 }}#ff5555{{ end }}"],
           "properties": {
