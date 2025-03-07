@@ -1,0 +1,94 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 3,
+  "blocks": [
+    {
+      "type": "rprompt",
+      "alignment": "right",
+      "overflow": "hide",
+      "segments": [
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "template": "{{ .FormattedMs }}",
+          "foreground": "p:teal",
+          "properties": {
+            "always_enabled": true
+          }
+        },
+        {
+          "type": "status",
+          "style": "plain",
+          "template": "{{ if gt .Code 0 }} ❌{{else}} ✔{{ end }} ",
+          "foreground": "p:teal",
+          "foreground_templates": ["{{ if gt .Code 0 }}#ff5555{{ end }}"],
+          "properties": {
+            "always_enabled": true
+          }
+        }
+      ]
+    },
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "os",
+          "style": "plain",
+          "template": "󰊠 ",
+          "foreground": "p:os",
+          "properties": {
+            "macos": "mac"
+          }
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "p:lavender",
+          "properties": {
+            "folder_separator_icon": "/",
+            "style": "full"
+          }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "template": "<#FDEEFC>on</> git({{ .HEAD }})",
+          "foreground": "p:rose",
+          "properties": {
+            "branch_template": "{{ .Branch }}",
+            "fetch_stash_count": false,
+            "fetch_status": true,
+            "fetch_upstream_icon": false,
+            "cherry_pick_icon": "",
+            "commit_icon": "",
+            "merge_icon": "",
+            "no_commits_icon": "",
+            "rebase_icon": "",
+            "revert_icon": "",
+            "tag_icon": ""
+          }
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "template": "  ",
+          "foreground": "p:os"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "palette": {
+    "rose": "#FD77DD",
+    "teal": "#A9DD48",
+    "os": "#FDEEFC",
+    "lavender": "#54C1DB"
+  }
+}
