@@ -11,7 +11,7 @@
           "type": "executiontime",
           "style": "plain",
           "template": "{{ .FormattedMs }}",
-          "foreground": "p:teal",
+          "foreground": "p:lime",
           "properties": {
             "always_enabled": true
           }
@@ -20,7 +20,7 @@
           "type": "status",
           "style": "plain",
           "template": "{{ if gt .Code 0 }} ❌{{else}} ✔{{ end }} ",
-          "foreground": "p:teal",
+          "foreground": "p:lime",
           "foreground_templates": ["{{ if gt .Code 0 }}#ff5555{{ end }}"],
           "properties": {
             "always_enabled": true
@@ -35,7 +35,7 @@
           "type": "os",
           "style": "plain",
           "template": "󰊠 ",
-          "foreground": "p:os",
+          "foreground": "p:pink",
           "properties": {
             "macos": "mac"
           }
@@ -43,7 +43,7 @@
         {
           "type": "path",
           "style": "plain",
-          "foreground": "p:lavender",
+          "foreground": "p:cyan",
           "properties": {
             "folder_separator_icon": "/",
             "style": "full"
@@ -52,8 +52,8 @@
         {
           "type": "git",
           "style": "plain",
-          "template": "<#FDEEFC>on</> git({{ .HEAD }})",
-          "foreground": "p:rose",
+          "template": "<#FDEEFC>on</>  ({{ .HEAD }}){{ if or (.Working.Changed) (.Staging.Changed) }} <#A9DD48></>{{ end }}",
+          "foreground": "p:magenta",
           "properties": {
             "branch_template": "{{ .Branch }}",
             "fetch_stash_count": false,
@@ -79,16 +79,16 @@
           "type": "text",
           "style": "plain",
           "template": "  ",
-          "foreground": "p:os"
+          "foreground": "p:pink"
         }
       ],
       "type": "prompt"
     }
   ],
   "palette": {
-    "rose": "#FD77DD",
-    "teal": "#A9DD48",
-    "os": "#FDEEFC",
-    "lavender": "#54C1DB"
+    "magenta": "#FD77DD", // Git branch
+    "lime": "#A9DD48", // Success color (✔, runtime)
+    "pink": "#FDEEFC", // Foreground (text color in Ghostty)
+    "cyan": "#54C1DB" // Folder/path highlight
   }
 }
