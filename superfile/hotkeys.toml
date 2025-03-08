@@ -51,7 +51,7 @@ toggle_footer = ['F']
 confirm_typing = ['enter']
 cancel_typing = ['esc']
 # search
-search_bar = ['s']
+search_bar = ['/']
 # select mode
 file_panel_select_mode_items_select_down = ['shift+j']
 file_panel_select_mode_items_select_up = ['shift+k']
