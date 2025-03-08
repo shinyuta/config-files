@@ -127,11 +127,17 @@ main() {
     set message-style "fg=$thm_muted,bg=$thm_base"
     set message-command-style "fg=$thm_base,bg=$thm_gold"
 
-    # Pane styling
-    set pane-border-style "fg=$thm_hl_high"
-    set pane-active-border-style "fg=$thm_gold"
-    set display-panes-active-colour "${thm_text}"
-    set display-panes-colour "${thm_gold}"
+    # ───────────────────────────────────────────
+    # PANE STYLING (MORE MUTED ACTIVE COLOR)
+    # ───────────────────────────────────────────
+
+    # Make inactive pane borders blend into the background
+    set pane-border-style "fg=#3a3a3a"  # Slightly brighter dark gray for inactive panes
+    set pane-active-border-style "fg=#6e6e6e"  # Muted but slightly more visible gray for active pane
+
+    # Reduce contrast of pane display numbers
+    set display-panes-active-colour "#6e6a86"  # Soft muted gray (instead of bright text color)
+    set display-panes-colour "#524f67"  # Slightly darker muted color for numbering
 
     # Windows
     setw window-status-style "fg=${thm_iris},bg=${thm_base}"
@@ -294,7 +300,8 @@ main() {
     show_window_in_window_status_current="#I#[fg=$thm_gold,bg=""]$left_separator#[fg=$thm_gold,bg=""]#W"
 
     local show_session
-    readonly show_session=" #[fg=#{?client_prefix,$thm_love,$thm_text}]$current_session_icon #[fg=$thm_text]#S "
+    readonly show_session=" #[fg=#{?client_prefix,$thm_love,$thm_text}]$current_session_icon  "  # Added extra space
+    # readonly show_session=" #[fg=#{?client_prefix,$thm_love,$thm_text}]$current_session_icon #[fg=$thm_text]#S "
 
     local show_user
     readonly show_user="#[fg=$thm_iris]#(whoami)#[fg=$thm_subtle]$right_separator#[fg=$thm_subtle]$username_icon"
@@ -306,7 +313,8 @@ main() {
     readonly show_date_time=" #[fg=$thm_foam]$date_time#[fg=$thm_subtle]$right_separator#[fg=$thm_subtle]$date_time_icon "
 
     local show_directory
-    readonly show_directory="$spacer#[fg=$thm_subtle]$current_folder_icon #[fg=$thm_rose]#{b:pane_current_path} "
+    # readonly show_directory="$spacer#[fg=$thm_subtle]$current_folder_icon #[fg=$thm_rose]#{b:pane_current_path} "
+    readonly show_directory="$spacer#[fg=$thm_rose]#{b:pane_current_path} "
 
     local show_directory_in_window_status
     # BUG: It doesn't let the user pass through a custom window name
