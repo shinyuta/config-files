@@ -1,10 +1,16 @@
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 export EZA_COLORS="di=38;5;148:ln=38;5;81:*.java=38;5;81:*.css=38;5;81:*.lua=38;5;81:*.class=38;5;81:*.md=38;5;81:*.py=38;5;81"
+export EDITOR=nvim
 
-eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/zen.toml)"
+eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/zen.json)"
 
 export PATH="$(brew --prefix ruby)/bin:$PATH"
+
+export CURRENT_FOLDER=$(basename "$PWD")
+precmd() {
+    export CURRENT_FOLDER=$(basename "$PWD")
+}
 
 # ---- FZF -----
 # Set up fzf key bindings and fuzzy completion
@@ -84,4 +90,6 @@ export YAZI_CONFIG_HOME="$HOME/.config/yazi"
 # ------- zsh ---------
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-export PATH="$(brew --prefix ruby)/bin:$PATH"
+
+# ------- SCRIPTS ---------
+alias syncsuperfile="~/.config/superfile/sync_superfile.sh"
