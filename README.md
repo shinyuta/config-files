@@ -9,3 +9,7 @@
 # Fuzzy Finder:
 
 ![images](./RM-images/fzf.png)
+
+# Custom Sketchybar (MacOS):
+
+![images](./RM-images/sketchybar.png)

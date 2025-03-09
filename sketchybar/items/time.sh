@@ -3,9 +3,10 @@
 # Subscribe all items to mouse.clicked so we can close the popup if user clicks elsewhere
 sketchybar --subscribe "/.*/" mouse.clicked
 
-# Clean up old references (optional)
+# Clean up old references
 sketchybar --remove time 2>/dev/null
 sketchybar --remove time.popup 2>/dev/null
+sketchybar --remove time.weather 2>/dev/null
 
 # 1) Add the "time" item on the LEFT side
 sketchybar --add item time left
@@ -27,9 +28,10 @@ sketchybar --set time \
 
 sketchybar --subscribe time mouse.clicked mouse.exited.global
 
-# 2) Add the popup child item "time.popup"
+# ---------------------------------------------------------------------------
+# Existing popup item for Date (Line 1)
+# ---------------------------------------------------------------------------
 sketchybar --add item time.popup popup.time
-
 sketchybar --set time.popup \
   icon="󰃭" \
   icon.drawing=on \
@@ -39,5 +41,20 @@ sketchybar --set time.popup \
   background.color=0x00000000 \
   update_freq=3600
 
-# If you want the date to auto-refresh every hour
 sketchybar --subscribe time.popup routine
+
+# ---------------------------------------------------------------------------
+# NEW popup item for Weather (Line 2)
+# ---------------------------------------------------------------------------
+sketchybar --add item time.weather popup.time
+sketchybar --set time.weather \
+  icon="󰖐" \
+  icon.drawing=on \
+  label="Loading..." \
+  script="$PLUGIN_DIR/weather_popup.sh" \
+  background.drawing=off \
+  background.color=0x00000000 \
+  update_freq=1800   # e.g., update every 30 minutes
+
+# If you want auto-refresh of the weather, subscribe it to routine as well
+sketchybar --subscribe time.weather routine

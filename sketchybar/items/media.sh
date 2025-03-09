@@ -6,6 +6,7 @@ sketchybar --add item media center \
                        icon.padding_left=0 \
                        scroll_texts=on \
                        icon=󰎆            \
+                       icon.font="JetBrainsMono Nerd Font:Regular:19.0" \
                        icon.color=$ACCENT_COLOR   \
                        background.drawing=off \
                        script="$PLUGIN_DIR/media.sh" \
