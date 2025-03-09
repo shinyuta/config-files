@@ -1,36 +1,25 @@
 #!/bin/bash
 
 CONFIG_DIR="$HOME/.config/sketchybar"
-
 source "$CONFIG_DIR/colors.sh"
-
-# This is a demo config to showcase some of the most important commands.
-# It is meant to be changed and configured, as it is intentionally kept sparse.
-# For a (much) more advanced configuration example see my dotfiles:
-# https://github.com/FelixKratz/dotfiles
 
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 ITEM_DIR="$CONFIG_DIR/items"
 
-##### Bar Appearance #####
-# Configuring the general appearance of the bar.
-# These are only some of the options available. For all options see:
-# https://felixkratz.github.io/SketchyBar/config/bar
-# If you are looking for other colors, see the color picker:
-# https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
-
+# Bar appearance
 sketchybar --bar position=top height=37 blur_radius=30 color=$BAR_COLOR
 
-##### Changing Defaults #####
-# We now change some default values, which are applied to all further items.
-# For a full list of all available item properties see:
-# https://felixkratz.github.io/SketchyBar/config/items
-
+# Defaults
 default=(
   padding_left=5
   padding_right=5
-  icon.font="JetBrainsMono Nerd Font:Regular:15.0"
-  label.font="Jetbrains Mono:Medium:15.0"
+
+  # Icons: Use Nerd Font (Regular)
+  icon.font="JetBrainsMono Nerd Font:Regular:14.0"
+
+  # Labels: Use standard JetBrains Mono (Medium)
+  label.font="Roboto Mono:Medium:16.0"
+
   icon.color=$ITEM_BG_COLOR
   label.color=$ITEM_BG_COLOR
   background.color=$ACCENT_COLOR
@@ -43,18 +32,18 @@ default=(
 )
 sketchybar --default "${default[@]}"
 
-# --- LEFT SIDE ITEMS -----
-source $ITEM_DIR/month.sh
-source $ITEM_DIR/aerospace.sh
-source $ITEM_DIR/front_app.sh
+# Left side items
+source "$ITEM_DIR/apple.sh"
+source "$ITEM_DIR/time.sh"
+sketchybar --update time time.popup
+source "$ITEM_DIR/aerospace.sh"
+source "$ITEM_DIR/front_app.sh"
 
-# -- Center Items --
-source $ITEM_DIR/media.sh
+# Center items
+source "$ITEM_DIR/media.sh"
 
-# --- RIGHT SIDE ITEMS -----
-source $ITEM_DIR/time.sh
-source $ITEM_DIR/volume.sh
-source $ITEM_DIR/battery.sh
+# Right side items
+source "$ITEM_DIR/battery.sh"
+source "$ITEM_DIR/volume.sh"
 
-##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update
