@@ -13,6 +13,30 @@
           "label" : "zen",
           "type" : "application",
           "value" : "/Applications/Zen.app"
+        },
+        {
+          "key" : "s",
+          "label" : "settings",
+          "type" : "application",
+          "value" : "/System/Applications/System Settings.app"
+        },
+        {
+          "key" : "n",
+          "label" : "notes",
+          "type" : "application",
+          "value" : "/System/Applications/Notes.app"
+        },
+        {
+          "key" : "m",
+          "label" : "mail",
+          "type" : "application",
+          "value" : "/System/Applications/Mail.app"
+        },
+        {
+          "key" : "f",
+          "label" : "finder",
+          "type" : "folder",
+          "value" : "/Users/yutakirihara/Downloads"
         }
       ],
       "key" : "o",
@@ -32,6 +56,18 @@
           "label" : "config",
           "type" : "folder",
           "value" : "/Users/yutakirihara/.config"
+        },
+        {
+          "key" : "s",
+          "label" : "search",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/file-search/search-files"
+        },
+        {
+          "key" : "d",
+          "label" : "downloads",
+          "type" : "folder",
+          "value" : "/Users/yutakirihara/Downloads"
         }
       ],
       "key" : "f",
@@ -64,10 +100,122 @@
           "key" : "y",
           "label" : "youtube",
           "type" : "group"
+        },
+        {
+          "key" : "r",
+          "label" : "reddit",
+          "type" : "url",
+          "value" : "https://www.reddit.com"
         }
       ],
       "key" : "l",
       "label" : "link",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "c",
+          "label" : "clipboard",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/clipboard-history/clipboard-history"
+        },
+        {
+          "key" : "s",
+          "label" : "schedule",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/calendar/my-schedule"
+        },
+        {
+          "key" : "d",
+          "label" : "define",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/dictionary/define-word"
+        }
+      ],
+      "key" : "c",
+      "label" : "raycast",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "m",
+          "label" : "mute",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/set-volume-to-0"
+        },
+        {
+          "key" : "u",
+          "label" : "up",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/set-volume-to-75"
+        },
+        {
+          "key" : "d",
+          "label" : "down",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/set-volume-to-25"
+        }
+      ],
+      "key" : "v",
+      "label" : "volume",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "l",
+          "label" : "lock",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/lock-screen"
+        },
+        {
+          "key" : "e",
+          "label" : "eject",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/eject-all-disks"
+        },
+        {
+          "key" : "t",
+          "label" : "trash",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/empty-trash"
+        }
+      ],
+      "key" : "s",
+      "label" : "system",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "m",
+          "label" : "maintain",
+          "type" : "command",
+          "value" : "zsh ~/Desktop/scripts/macos_maintenance.sh"
+        },
+        {
+          "key" : "c",
+          "label" : "cleanup",
+          "type" : "command",
+          "value" : "zsh ~/Desktop/scripts/cleanup_storage.sh"
+        },
+        {
+          "key" : "d",
+          "label" : "downloads",
+          "type" : "command",
+          "value" : "zsh ~/Desktop/scripts/organize_downloads.sh"
+        },
+        {
+          "key" : "r",
+          "label" : "reload",
+          "type" : "command",
+          "value" : "zsh ~/Desktop/scripts/reload_config.sh"
+        }
+      ],
+      "key" : "r",
+      "label" : "run",
       "type" : "group"
     }
   ],

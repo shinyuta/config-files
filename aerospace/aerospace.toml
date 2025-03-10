@@ -169,7 +169,11 @@ if.app-id = 'com.apple.finder'
 run = "move-node-to-workspace 3"
 
 [[on-window-detected]]
-if.app-id = 'com.apple.mobilenotes'
+if.app-id = 'com.apple.Notes'
+run = "move-node-to-workspace 4"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.mail'
 run = "move-node-to-workspace 4"
 
 [[on-window-detected]]
