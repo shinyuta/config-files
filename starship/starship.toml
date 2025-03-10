@@ -1,0 +1,92 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Prevent Starship from inserting an extra newline
+add_newline = false
+
+# Ensure Starship does NOT insert an empty newline above the prompt
+format = """$os($all)$character"""
+
+# Right Side: Status, C Compiler, Programming Language Info
+right_format = "$status$c$lua$python"
+
+[line_break]
+disabled = true
+
+# ──────────────────────────────────────────────────────────────
+# Git Branch (Adds `` Only for Modified Files)
+[git_branch]
+symbol = " "
+format = "[on ](#FDEEFC)[$symbol$branch]($style) $git_status"
+style = "bold #FD77DD"  # Default Magenta
+
+# ──────────────────────────────────────────────────────────────
+# Git Status: Show `` ONLY when there are modified files
+[git_status]
+format = "[ ]($style)"  # Shows `` only when modified files exist
+modified = " "  # Triggers only if there are modified files
+style = "bold #A9DD48"  # Green color for ``
+ignore_submodules = false
+disabled = false
+
+# ──────────────────────────────────────────────────────────────
+# Status Indicator (Success / Failure)
+[status]
+format = '([]($style) )'
+success_symbol = "[✔](bold #A9DD48)"  # Lime
+symbol = "[](bold red)"  # Error Symbol
+map_symbol = true
+disabled = false
+
+# ──────────────────────────────────────────────────────────────
+# C Compiler Information (Right Side)
+[c]
+format = '[$symbol$version]($style) '
+style = "bold #FD77DD"  # Magenta
+symbol = " "  # C Language icon (Nerd Font)
+detect_extensions = ["c", "h"]
+detect_files = []
+detect_folders = []
+commands = [
+  ["cc", "--version"],
+  ["gcc", "--version"],
+  ["clang", "--version"]
+]
+
+# ──────────────────────────────────────────────────────────────
+# Lua Information (Right Side)
+[lua]
+format = '[$symbol$version]($style) '
+style = "bold #54C1DB"  # Neon Blue
+symbol = "🌙 "
+
+# ──────────────────────────────────────────────────────────────
+# Python Information (Right Side)
+[python]
+format = '[$symbol$version]($style) '
+style = "bold #A9DD48"  # Lime
+symbol = "🐍 "
+
+# ──────────────────────────────────────────────────────────────
+# Unified Character Prompt with Vim Mode Support
+[character]
+success_symbol = "[❯](bold #A9DD48)"  # Insert Mode (Lime Green)
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold #54C1DB)"  # Normal Mode (Neon Blue)
+vimcmd_visual_symbol = "[❮](bold #FD77DD)"  # Visual & V-Line Mode (Magenta)
+vimcmd_replace_symbol = "[❮](bold #FD77DD)"  # Replace Mode (Magenta)
+
+# ──────────────────────────────────────────────────────────────
+# Left Side Prompt (Ghost Emoji First, Then Directory, Git Info)
+# ──────────────────────────────────────────────────────────────
+
+[os]
+format = "[󰊠  ]($style)"
+style = "bold #FDEEFC" # Pink
+disabled = false
+
+[directory]
+truncation_length = 3
+truncate_to_repo = false
+style = "bold #54C1DB" # Cyan
+read_only = " "
+format = "[$path]($style)[$read_only]($read_only_style) "

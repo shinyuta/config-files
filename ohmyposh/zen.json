@@ -86,9 +86,9 @@
     }
   ],
   "palette": {
-    "magenta": "#FD77DD", // Git branch
-    "lime": "#A9DD48", // Success color (✔, runtime)
-    "pink": "#FDEEFC", // Foreground (text color in Ghostty)
-    "cyan": "#54C1DB" // Folder/path highlight
+    "magenta": "#FD77DD",
+    "lime": "#A9DD48",
+    "pink": "#FDEEFC",
+    "cyan": "#54C1DB"
   }
 }

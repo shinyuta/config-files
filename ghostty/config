@@ -46,8 +46,6 @@ scrollback-limit = 524288
 
 # ===== KEYBINDS =====
 keybind = global:cmd+s=toggle_quick_terminal
-keybind = ctrl+v=new_split:right
-keybind = ctrl+x=close_surface
 
 # custom-shader = /Users/yutakirihara/.config/ghostty/shaders/bloom.glsl
 custom-shader-animation = true
