@@ -1,0 +1,75 @@
+{
+  "actions" : [
+    {
+      "actions" : [
+        {
+          "key" : "t",
+          "label" : "ghostty",
+          "type" : "application",
+          "value" : "/Applications/Ghostty.app"
+        },
+        {
+          "key" : "z",
+          "label" : "zen",
+          "type" : "application",
+          "value" : "/Applications/Zen.app"
+        }
+      ],
+      "key" : "o",
+      "label" : "open",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "o",
+          "label" : "desktop",
+          "type" : "folder",
+          "value" : "/Users/yutakirihara/Desktop"
+        },
+        {
+          "key" : "c",
+          "label" : "config",
+          "type" : "folder",
+          "value" : "/Users/yutakirihara/.config"
+        }
+      ],
+      "key" : "f",
+      "label" : "finder",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "g",
+          "label" : "github",
+          "type" : "url",
+          "value" : "https://github.com/shinyuta"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "y",
+              "label" : "youtube",
+              "type" : "url",
+              "value" : "https://www.youtube.com"
+            },
+            {
+              "key" : "h",
+              "label" : "yt history",
+              "type" : "url",
+              "value" : "https://www.youtube.com/feed/history"
+            }
+          ],
+          "key" : "y",
+          "label" : "youtube",
+          "type" : "group"
+        }
+      ],
+      "key" : "l",
+      "label" : "link",
+      "type" : "group"
+    }
+  ],
+  "type" : "group"
+}

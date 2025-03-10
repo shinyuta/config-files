@@ -48,3 +48,16 @@ sketchybar --set apple.lock \
   label.padding_left=6 \
   label.padding_right=6
 sketchybar --subscribe apple.lock mouse.clicked
+
+# 7) Add “Reload” item
+sketchybar --add item apple.reload popup.apple.logo
+sketchybar --set apple.reload \
+  script="$PLUGIN_DIR/apple.sh" \
+  icon="" \
+  label="Reload" \
+  background.drawing=off \
+  icon.color=0xffffffff \
+  label.color=0xffffffff \
+  label.padding_left=6 \
+  label.padding_right=6
+sketchybar --subscribe apple.reload mouse.clicked

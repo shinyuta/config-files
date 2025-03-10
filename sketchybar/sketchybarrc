@@ -20,8 +20,8 @@ default=(
   # Labels: Use standard JetBrains Mono (Medium)
   label.font="Roboto Mono:Medium:16.0"
 
-  icon.color=$ITEM_BG_COLOR
-  label.color=$ITEM_BG_COLOR
+  icon.color=$DIM
+  label.color=$DIM
   background.color=$ACCENT_COLOR
   background.corner_radius=8
   background.height=24
@@ -46,5 +46,7 @@ source "$ITEM_DIR/media.sh"
 source "$ITEM_DIR/battery.sh"
 source "$ITEM_DIR/volume.sh"
 source "$ITEM_DIR/cpu.sh"
+source "$ITEM_DIR/ram.sh"
+source "$ITEM_DIR/net.sh"
 
 sketchybar --update

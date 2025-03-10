@@ -11,9 +11,9 @@ close_popup_animate() {
     popup.background.color=0xcc000000
 
   ########################################################################
-  # Step B: Ensure child items (preferences, lock) are fully visible
+  # Step B: Ensure child items (preferences, lock, reload) are fully visible
   ########################################################################
-  for child in apple.preferences apple.lock; do
+  for child in apple.preferences apple.lock apple.reload; do
     sketchybar --set "$child" \
       icon.color=0xffffffff \
       label.color=0xffffffff
@@ -28,7 +28,7 @@ close_popup_animate() {
   ########################################################################
   # Step D: Animate the child items' icon/label color to transparent
   ########################################################################
-  for child in apple.preferences apple.lock; do
+  for child in apple.preferences apple.lock apple.reload; do
     sketchybar --animate sin 20 --set "$child" \
       icon.color=0x00ffffff \
       label.color=0x00ffffff
@@ -47,7 +47,7 @@ close_popup_animate() {
     popup.y_offset=0 \
     popup.background.color=0xcc000000
 
-  for child in apple.preferences apple.lock; do
+  for child in apple.preferences apple.lock apple.reload; do
     sketchybar --set "$child" \
       icon.color=0xffffffff \
       label.color=0xffffffff
@@ -88,6 +88,9 @@ case "$SENDER" in
       close_popup_animate
     elif [ "$NAME" = "apple.lock" ]; then
       pmset displaysleepnow
+      close_popup_animate
+    elif [ "$NAME" = "apple.reload" ]; then
+      sketchybar --reload
       close_popup_animate
     else
       close_popup_animate
