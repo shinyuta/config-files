@@ -13,20 +13,18 @@ right_format = "$status$c$lua$python"
 disabled = true
 
 # ──────────────────────────────────────────────────────────────
-# Git Branch (Adds `` Only for Modified Files)
+# Git Branch (No Git Status Indicators)
 [git_branch]
 symbol = " "
-format = "[on ](#FDEEFC)[$symbol$branch]($style) $git_status"
-style = "bold #FD77DD"  # Default Magenta
+format = "[on ](#FDEEFC)[$symbol$branch]($style) "
+style = "bold #FD77DD"  # Magenta (Git branch name)
+ignore_branches = []  # Ensures all branches are shown
+only_attached = true  # Hides detached HEAD state
 
 # ──────────────────────────────────────────────────────────────
-# Git Status: Show `` ONLY when there are modified files
+# Explicitly Disable Git Status to Remove `[!]`
 [git_status]
-format = "[ ]($style)"  # Shows `` only when modified files exist
-modified = " "  # Triggers only if there are modified files
-style = "bold #A9DD48"  # Green color for ``
-ignore_submodules = false
-disabled = false
+disabled = true
 
 # ──────────────────────────────────────────────────────────────
 # Status Indicator (Success / Failure)
@@ -80,7 +78,7 @@ vimcmd_replace_symbol = "[❮](bold #FD77DD)"  # Replace Mode (Magenta)
 # ──────────────────────────────────────────────────────────────
 
 [os]
-format = "[󰊠  ]($style)"
+format = "[󰊠 ]($style)"
 style = "bold #FDEEFC" # Pink
 disabled = false
 
