@@ -212,6 +212,12 @@
           "label" : "reload",
           "type" : "command",
           "value" : "zsh ~/Desktop/scripts/reload_config.sh"
+        },
+        {
+          "key" : "a",
+          "label" : "commit config",
+          "type" : "command",
+          "value" : "zsh ~/Desktop/scripts/auto_commit_config.sh"
         }
       ],
       "key" : "r",
