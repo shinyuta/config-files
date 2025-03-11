@@ -79,11 +79,11 @@ symbol = "🐍 "
 # ──────────────────────────────────────────────────────────────
 # Unified Character Prompt with Vim Mode Support
 [character]
-success_symbol = "[](bold fg:toxic_green) "  # Insert Mode (Toxic Green)
-error_symbol = "[](bold fg:error_red) "  # Error (Red)
-vimcmd_symbol = "[](bold fg:neon_blue) "  # Normal Mode (Neon Blue)
-vimcmd_visual_symbol = "[](bold fg:main_pink) "  # Visual Mode (Main Pink)
-vimcmd_replace_symbol = "[](bold fg:main_pink) "  # Replace Mode (Main Pink)
+success_symbol = "[ ](bold fg:toxic_green) "  # Insert Mode (Toxic Green)
+error_symbol = "[ ](bold fg:error_red) "  # Error (Red)
+vimcmd_symbol = "[ ](bold fg:neon_blue) "  # Normal Mode (Neon Blue)
+vimcmd_visual_symbol = "[ ](bold fg:main_pink) "  # Visual Mode (Main Pink)
+vimcmd_replace_symbol = "[ ](bold fg:main_pink) "  # Replace Mode (Main Pink)
 format = "$symbol"  # Correct way to reference Starship symbols
 
 # ──────────────────────────────────────────────────────────────
