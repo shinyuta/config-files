@@ -1,46 +1,58 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-# Prevent Starship from inserting an extra newline
-add_newline = false
+# Global Settings
+scan_timeout = 30          # Timeout for file scanning (ms)
+command_timeout = 500      # Timeout for executing Starship commands (ms)
+add_newline = false        # Prevent extra newlines
+palette = 'custom_palette' # Use custom color palette
+follow_symlinks = true     # Follow symlinks when checking directories
 
-# Ensure Starship does NOT insert an empty newline above the prompt
+# Custom prompt format
 format = """$os($all)$character"""
-
-# Right Side: Status, C Compiler, Programming Language Info
 right_format = "$status$c$lua$python"
 
 [line_break]
 disabled = true
 
 # ──────────────────────────────────────────────────────────────
+# 🎨 Define the Custom Color Palette
+[palettes.custom_palette]
+main_text = "#FDEEFC"   # Light Pink (Text)
+main_pink = "#FD77DD"   # Magenta (Foam)
+neon_blue = "#54C1DB"   # Neon Blue (Gold)
+toxic_green = "#A9DD48" # Toxic Green (Pine)
+error_red = "red"
+
+# ──────────────────────────────────────────────────────────────
 # Git Branch (No Git Status Indicators)
 [git_branch]
 symbol = " "
-format = "[on ](#FDEEFC)[$symbol$branch]($style) "
-style = "bold #FD77DD"  # Magenta (Git branch name)
-ignore_branches = []  # Ensures all branches are shown
-only_attached = true  # Hides detached HEAD state
+format = "[on ](fg:main_text)[$symbol$branch]($style) "
+style = "bold fg:main_pink"
+ignore_branches = []
+only_attached = true
 
 # ──────────────────────────────────────────────────────────────
-# Explicitly Disable Git Status to Remove `[!]`
+# Explicitly Disable Git Status
 [git_status]
 disabled = true
 
 # ──────────────────────────────────────────────────────────────
 # Status Indicator (Success / Failure)
 [status]
-format = '([]($style) )'
-success_symbol = "[✔](bold #A9DD48)"  # Lime
-symbol = "[](bold red)"  # Error Symbol
+format = '[{symbol}]($style) '
+success_symbol = "[✔]"
+symbol = "[]"
 map_symbol = true
 disabled = false
+style = "bold fg:toxic_green"  # Success style applied
 
 # ──────────────────────────────────────────────────────────────
 # C Compiler Information (Right Side)
 [c]
 format = '[$symbol$version]($style) '
-style = "bold #FD77DD"  # Magenta
-symbol = " "  # C Language icon (Nerd Font)
+style = "bold fg:main_pink"
+symbol = " "
 detect_extensions = ["c", "h"]
 detect_files = []
 detect_folders = []
@@ -54,37 +66,36 @@ commands = [
 # Lua Information (Right Side)
 [lua]
 format = '[$symbol$version]($style) '
-style = "bold #54C1DB"  # Neon Blue
+style = "bold fg:neon_blue"
 symbol = "🌙 "
 
 # ──────────────────────────────────────────────────────────────
 # Python Information (Right Side)
 [python]
 format = '[$symbol$version]($style) '
-style = "bold #A9DD48"  # Lime
+style = "bold fg:toxic_green"
 symbol = "🐍 "
 
 # ──────────────────────────────────────────────────────────────
 # Unified Character Prompt with Vim Mode Support
 [character]
-success_symbol = "[❯](bold #A9DD48)"  # Insert Mode (Lime Green)
-error_symbol = "[❯](bold red)"
-vimcmd_symbol = "[❮](bold #54C1DB)"  # Normal Mode (Neon Blue)
-vimcmd_visual_symbol = "[❮](bold #FD77DD)"  # Visual & V-Line Mode (Magenta)
-vimcmd_replace_symbol = "[❮](bold #FD77DD)"  # Replace Mode (Magenta)
+success_symbol = "[](bold fg:toxic_green) "  # Insert Mode (Toxic Green)
+error_symbol = "[](bold fg:error_red) "  # Error (Red)
+vimcmd_symbol = "[](bold fg:neon_blue) "  # Normal Mode (Neon Blue)
+vimcmd_visual_symbol = "[](bold fg:main_pink) "  # Visual Mode (Main Pink)
+vimcmd_replace_symbol = "[](bold fg:main_pink) "  # Replace Mode (Main Pink)
+format = "$symbol"  # Correct way to reference Starship symbols
 
 # ──────────────────────────────────────────────────────────────
-# Left Side Prompt (Ghost Emoji First, Then Directory, Git Info)
-# ──────────────────────────────────────────────────────────────
-
+# Left Side Prompt
 [os]
 format = "[󰊠 ]($style)"
-style = "bold #FDEEFC" # Pink
+style = "bold fg:main_text"
 disabled = false
 
 [directory]
 truncation_length = 3
-truncate_to_repo = false
-style = "bold #54C1DB" # Cyan
+truncate_to_repo = true
+style = "bold fg:neon_blue"
 read_only = " "
 format = "[$path]($style)[$read_only]($read_only_style) "

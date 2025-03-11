@@ -1,31 +1,18 @@
-export ZSH="$HOME/.oh-my-zsh"
-source $ZSH/oh-my-zsh.sh
-export EZA_COLORS="di=38;5;148:ln=38;5;81:*.java=38;5;81:*.css=38;5;81:*.lua=38;5;81:*.class=38;5;81:*.md=38;5;81:*.py=38;5;81"
 export EDITOR=nvim
 
-eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/zen.json)"
+# ---- STARSHIP -----
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
+eval "$(starship init zsh)"
 
 export PATH="$(brew --prefix ruby)/bin:$PATH"
 
-export CURRENT_FOLDER=$(basename "$PWD")
-precmd() {
-    export CURRENT_FOLDER=$(basename "$PWD")
-}
-
 # ---- FZF -----
-# Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
-# -- Use fd instead of fzf --
-
-# Use fd (https://github.com/sharkdp/fd) for listing path candidates.
-# - The first argument to the function ($1) is the base path to start traversal
-# - See the source code (completion.{bash,zsh}) for the details.
 _fzf_compgen_path() {
   fd --hidden --exclude .git . "$1"
 }
 
-# Use fd to generate the list for directory completion
 _fzf_compgen_dir() {
   fd --type=d --hidden --exclude .git . "$1"
 }
@@ -39,9 +26,6 @@ export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 
 alias fs='nvim $(fzf --preview="bat --color=always {}" -m)'
 
-# Advanced customization of fzf options via _fzf_comprun function
-# - The first argument to the function is the name of the command.
-# - You should make sure to pass the rest of the arguments to fzf.
 _fzf_comprun() {
   local command=$1
   shift
@@ -66,6 +50,7 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 BAT_THEME="Catppuccin Mocha"
 
 # ------ EZA/LS -------
+export EZA_COLORS="di=38;5;148:ln=38;5;81:*.java=38;5;81:*.css=38;5;81:*.lua=38;5;81:*.class=38;5;81:*.md=38;5;81:*.py=38;5;81"
 alias ls="eza --color=always -G --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias lst="eza --icons=always -1 -T --level=2"
 alias lsl="eza -l"
@@ -93,3 +78,10 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # ------- SCRIPTS ---------
 alias syncsuperfile="~/.config/superfile/sync_superfile.sh"
+
+# ------- VIM MODE ---------
+# Enable Vim mode in Zsh
+bindkey -v
+
+# Reduce delay when switching modes
+export KEYTIMEOUT=1
