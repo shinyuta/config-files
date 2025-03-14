@@ -33,7 +33,7 @@ macos-window-shadow = false
 macos-icon = xray
 
 # ===== Window Padding =====
-window-padding-x = 0
+window-padding-x = 20
 window-padding-y = 0
 
 # ===== Font Settings =====

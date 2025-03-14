@@ -5,9 +5,10 @@ sketchybar --add item media center \
                        label.max_chars=20 \
                        icon.padding_left=0 \
                        scroll_texts=on \
-                       icon=󰎆            \
+                       icon=󰎆 \
                        icon.font="JetBrainsMono Nerd Font:Regular:19.0" \
-                       icon.color=$ACCENT_COLOR   \
+                       icon.color=$ACCENT_COLOR \
                        background.drawing=off \
                        script="$PLUGIN_DIR/media.sh" \
-           --subscribe media media_change
+                       click_script="$PLUGIN_DIR/media_pause.sh" \
+           --subscribe media media_change mouse.clicked

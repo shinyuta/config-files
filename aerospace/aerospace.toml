@@ -185,9 +185,17 @@ if.app-id = 'com.smartcodeltd.stremio'
 run = "move-node-to-workspace 5"
 
 [[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = "move-node-to-workspace 5"
+
+[[on-window-detected]]
 if.app-id = 'fm.poolside.mobile'
 run = "move-node-to-workspace 5"
 
 [[on-window-detected]]
 if.app-id = 'com.apple.systempreferences'
+run = "move-node-to-workspace 6"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.ActivityMonitor'
 run = "move-node-to-workspace 6"

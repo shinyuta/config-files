@@ -18,7 +18,7 @@
           "key" : "s",
           "label" : "settings",
           "type" : "application",
-          "value" : "/System/Applications/System Settings.app"
+          "value" : "/Applications/Spotify.app"
         },
         {
           "key" : "n",
@@ -37,6 +37,12 @@
           "label" : "finder",
           "type" : "folder",
           "value" : "/Users/yutakirihara/Downloads"
+        },
+        {
+          "key" : "v",
+          "label" : "stremio",
+          "type" : "application",
+          "value" : "/Applications/Stremio.app"
         }
       ],
       "key" : "o",
@@ -131,6 +137,12 @@
           "label" : "define",
           "type" : "url",
           "value" : "raycast://extensions/raycast/dictionary/define-word"
+        },
+        {
+          "key" : "t",
+          "label" : "typing",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/typing-practice/start-typing-practice"
         }
       ],
       "key" : "c",
@@ -156,6 +168,12 @@
           "label" : "down",
           "type" : "url",
           "value" : "raycast://extensions/raycast/system/set-volume-to-25"
+        },
+        {
+          "key" : "h",
+          "label" : "half",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/set-volume-to-50"
         }
       ],
       "key" : "v",
@@ -181,6 +199,12 @@
           "label" : "trash",
           "type" : "url",
           "value" : "raycast://extensions/raycast/system/empty-trash"
+        },
+        {
+          "key" : "s",
+          "label" : "settings",
+          "type" : "application",
+          "value" : "/System/Applications/System Settings.app"
         }
       ],
       "key" : "s",
@@ -222,6 +246,43 @@
       ],
       "key" : "r",
       "label" : "run",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "n",
+          "label" : "next",
+          "type" : "command",
+          "value" : "osascript -e 'tell application \"Spotify\" to next track'\n"
+        },
+        {
+          "key" : "p",
+          "label" : "previous",
+          "type" : "command",
+          "value" : "osascript -e 'tell application \"Spotify\" to previous track'\n"
+        },
+        {
+          "key" : "t",
+          "label" : "pause/play",
+          "type" : "command",
+          "value" : "osascript -e 'tell application \"Spotify\" to playpause'\n"
+        },
+        {
+          "key" : "u",
+          "label" : "volume up",
+          "type" : "command",
+          "value" : "osascript -e 'tell application \"Spotify\" to set sound volume to (sound volume + 10)'"
+        },
+        {
+          "key" : "d",
+          "label" : "volume down",
+          "type" : "command",
+          "value" : "osascript -e 'tell application \"Spotify\" to set sound volume to (sound volume - 10)'\n"
+        }
+      ],
+      "key" : "m",
+      "label" : "music",
       "type" : "group"
     }
   ],

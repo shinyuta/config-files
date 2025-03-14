@@ -1,15 +1,14 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 # Global Settings
-scan_timeout = 30          # Timeout for file scanning (ms)
-command_timeout = 500      # Timeout for executing Starship commands (ms)
 add_newline = false        # Prevent extra newlines
 palette = 'custom_palette' # Use custom color palette
 follow_symlinks = true     # Follow symlinks when checking directories
+command_timeout = 5000  # Increase timeout to 5 seconds
 
 # Custom prompt format
 format = """$os($all)$character"""
-right_format = "$status$c$lua$python"
+right_format = "$status"
 
 [line_break]
 disabled = true
@@ -40,41 +39,12 @@ disabled = true
 # ──────────────────────────────────────────────────────────────
 # Status Indicator (Success / Failure)
 [status]
-format = '[{symbol}]($style) '
-success_symbol = "[✔]"
-symbol = "[]"
+format = '$symbol($style) '  # ✅ Brackets removed
+success_symbol = "✔"
+symbol = ""
 map_symbol = true
 disabled = false
-style = "bold fg:toxic_green"  # Success style applied
-
-# ──────────────────────────────────────────────────────────────
-# C Compiler Information (Right Side)
-[c]
-format = '[$symbol$version]($style) '
-style = "bold fg:main_pink"
-symbol = " "
-detect_extensions = ["c", "h"]
-detect_files = []
-detect_folders = []
-commands = [
-  ["cc", "--version"],
-  ["gcc", "--version"],
-  ["clang", "--version"]
-]
-
-# ──────────────────────────────────────────────────────────────
-# Lua Information (Right Side)
-[lua]
-format = '[$symbol$version]($style) '
-style = "bold fg:neon_blue"
-symbol = "🌙 "
-
-# ──────────────────────────────────────────────────────────────
-# Python Information (Right Side)
-[python]
-format = '[$symbol$version]($style) '
 style = "bold fg:toxic_green"
-symbol = "🐍 "
 
 # ──────────────────────────────────────────────────────────────
 # Unified Character Prompt with Vim Mode Support

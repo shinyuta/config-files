@@ -1,5 +1,5 @@
 #!/bin/bash
-# Calculates the "Available" memory percentage on macOS in a similar way to btop.
+# Calculates the "Used" memory percentage on macOS (btop-style).
 # Then updates the SketchyBar item named $NAME with a triple-digit percentage.
 
 # Optionally load your colors if needed:
@@ -32,7 +32,7 @@ unused_mb=$(echo "$line" \
 ###############################################################################
 # used_by_apps = total_used_mb - wired_mb - compressor_mb - unused_mb
 used_by_apps=$(( total_used_mb - wired_mb - compressor_mb - unused_mb ))
-[ "$used_by_apps" -lt 0 ] && used_by_apps=0  # safety clamp
+[ "$used_by_apps" -lt 0 ] && used_by_apps=0  # Safety clamp
 
 ###############################################################################
 # Determine total memory in MB (8 GiB => 8192 MB, etc.)
@@ -41,16 +41,19 @@ total_mem_bytes=$(sysctl -n hw.memsize)
 total_mem_mb=$(( total_mem_bytes / 1024 / 1024 ))
 
 ###############################################################################
-# Calculate "available" memory
+# Calculate "used" memory percentage
 ###############################################################################
 available_mb=$(( total_mem_mb - used_by_apps ))
 [ "$available_mb" -lt 0 ] && available_mb=0
 
-# Compute available percentage (rounded to integer)
+# Compute available percentage
 available_percent=$(awk "BEGIN {printf \"%.0f\", ($available_mb / $total_mem_mb) * 100}")
 
+# Compute used percentage
+used_percent=$((100 - available_percent))
+
 # Format as triple-digit (e.g., "061%")
-formatted=$(printf "%03d" "$available_percent")
+formatted=$(printf "%03d" "$used_percent")
 
 ###############################################################################
 # Update the SketchyBar item with the result
