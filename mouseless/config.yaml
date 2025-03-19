@@ -271,7 +271,7 @@ keymaps:
     enter wheel mode: null
     execute mouse action: Space
     execute mouse move: ControlRight tap
-    exit wheel mode: Escape
+    exit wheel mode: null
     forward mouse button (w/o overlay): null
     hide overlay: Escape
     hold for back button: null
@@ -281,7 +281,7 @@ keymaps:
     hold for move: null
     hold for right button: ShiftLeft
     hold for speed decrease: null
-    hold for speed increase: ShiftLeft
+    hold for speed increase: null
     increase overlay opacity: ArrowUp
     jump to bottom: null
     jump to left edge: null
@@ -298,13 +298,13 @@ keymaps:
     toggle continuous mode: null
     toggle continuous mode until closed: null
     toggle overlay: null
-    toggle wheel mode: ShiftRight
+    toggle wheel mode: null
     undo last key: Backspace
-    wheel down: J
+    wheel down: null
     wheel down fast: null
-    wheel left: H
+    wheel left: null
     wheel left fast: null
-    wheel right: L
+    wheel right: null
     wheel right fast: null
     wheel step down: null
     wheel step down large: null
@@ -314,7 +314,7 @@ keymaps:
     wheel step right large: null
     wheel step up: null
     wheel step up large: null
-    wheel up: K
+    wheel up: null
     wheel up fast: null
   name: mac
 monitor_assignment_mode: auto

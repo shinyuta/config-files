@@ -10,6 +10,5 @@ sketchybar --add item media center \
                        icon.color=$ACCENT_COLOR \
                        background.drawing=off \
                        script="$PLUGIN_DIR/media.sh" \
-                       click_script="$PLUGIN_DIR/media_pause.sh" \
                        update_freq=5 \
-           --subscribe media media_change mouse.clicked
+           --subscribe media media_change
