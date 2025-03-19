@@ -43,6 +43,12 @@
           "label" : "stremio",
           "type" : "application",
           "value" : "/Applications/Stremio.app"
+        },
+        {
+          "key" : "b",
+          "label" : "",
+          "type" : "application",
+          "value" : "/Applications/Obsidian.app"
         }
       ],
       "key" : "o",
@@ -83,54 +89,10 @@
     {
       "actions" : [
         {
-          "key" : "g",
-          "label" : "github",
-          "type" : "url",
-          "value" : "https://github.com/shinyuta"
-        },
-        {
-          "actions" : [
-            {
-              "key" : "y",
-              "label" : "youtube",
-              "type" : "url",
-              "value" : "https://www.youtube.com"
-            },
-            {
-              "key" : "h",
-              "label" : "yt history",
-              "type" : "url",
-              "value" : "https://www.youtube.com/feed/history"
-            }
-          ],
-          "key" : "y",
-          "label" : "youtube",
-          "type" : "group"
-        },
-        {
-          "key" : "r",
-          "label" : "reddit",
-          "type" : "url",
-          "value" : "https://www.reddit.com"
-        }
-      ],
-      "key" : "l",
-      "label" : "link",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
           "key" : "c",
           "label" : "clipboard",
           "type" : "url",
           "value" : "raycast://extensions/raycast/clipboard-history/clipboard-history"
-        },
-        {
-          "key" : "s",
-          "label" : "schedule",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/calendar/my-schedule"
         },
         {
           "key" : "d",
@@ -143,10 +105,16 @@
           "label" : "typing",
           "type" : "url",
           "value" : "raycast://extensions/raycast/typing-practice/start-typing-practice"
+        },
+        {
+          "key" : "s",
+          "label" : "screenshot",
+          "type" : "url",
+          "value" : "raycast://extensions/HelloImSteven/keyboard-shortcut-sequences/run-shortcut-sequence?arguments=%7B%22sequenceName%22%3A%22Take%20Screenshot%20(Shottr)%22%7D"
         }
       ],
-      "key" : "c",
-      "label" : "raycast",
+      "key" : "t",
+      "label" : "tools",
       "type" : "group"
     },
     {
@@ -283,6 +251,57 @@
       ],
       "key" : "m",
       "label" : "music",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "s",
+          "label" : "search",
+          "type" : "url",
+          "value" : "raycast://extensions/KevinBatdorf/obsidian/searchNoteCommand?arguments=%7B%22tagArgument%22%3A%22%22%2C%22searchArgument%22%3A%22%22%7D"
+        },
+        {
+          "key" : "d",
+          "label" : "daily",
+          "type" : "url",
+          "value" : "raycast://extensions/KevinBatdorf/obsidian/dailyNoteCommand"
+        }
+      ],
+      "key" : "b",
+      "label" : "obsidian",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "s",
+          "label" : "search",
+          "type" : "url",
+          "value" : "raycast://extensions/tonka3000/youtube/search-videos?arguments=%7B%22query%22%3A%22%22%7D"
+        },
+        {
+          "key" : "h",
+          "label" : "history",
+          "type" : "url",
+          "value" : "https://www.youtube.com/feed/history"
+        }
+      ],
+      "key" : "y",
+      "label" : "youtube",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "s",
+          "label" : "schedule",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/calendar/my-schedule"
+        }
+      ],
+      "key" : "d",
+      "label" : "daily",
       "type" : "group"
     }
   ],
