@@ -16,7 +16,7 @@
         },
         {
           "key" : "s",
-          "label" : "settings",
+          "label" : "spotify",
           "type" : "application",
           "value" : "/Applications/Spotify.app"
         },
@@ -45,10 +45,16 @@
           "value" : "/Applications/Stremio.app"
         },
         {
-          "key" : "b",
-          "label" : "",
+          "key" : "o",
+          "label" : "obsidian",
           "type" : "application",
           "value" : "/Applications/Obsidian.app"
+        },
+        {
+          "key" : "b",
+          "label" : "bookmark",
+          "type" : "url",
+          "value" : "raycast://extensions/lardissone/raindrop-io/search"
         }
       ],
       "key" : "o",
@@ -150,6 +156,12 @@
               "label" : "brew",
               "type" : "url",
               "value" : "raycast://extensions/nhojb/brew/installed"
+            },
+            {
+              "key" : "t",
+              "label" : "toothpick",
+              "type" : "url",
+              "value" : "raycast://extensions/VladCuciureanu/toothpick/manage-bluetooth-connections"
             }
           ],
           "key" : "b",
@@ -244,16 +256,29 @@
           "value" : "zsh ~/Desktop/scripts/organize_downloads.sh"
         },
         {
-          "key" : "r",
-          "label" : "reload",
-          "type" : "command",
-          "value" : "zsh ~/Desktop/scripts/reload_config.sh"
-        },
-        {
           "key" : "a",
           "label" : "commit config",
           "type" : "command",
           "value" : "zsh ~/Desktop/scripts/auto_commit_config.sh"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "r",
+              "label" : "remove",
+              "type" : "command",
+              "value" : "zsh ~/Desktop/scripts/remove_prefixes.sh\n"
+            },
+            {
+              "key" : "d",
+              "label" : "documents",
+              "type" : "command",
+              "value" : "zsh ~/Desktop/scripts/rename_files.sh"
+            }
+          ],
+          "key" : "r",
+          "label" : "rename",
+          "type" : "group"
         }
       ],
       "key" : "r",
@@ -291,6 +316,12 @@
           "label" : "volume down",
           "type" : "command",
           "value" : "osascript -e 'tell application \"Spotify\" to set sound volume to (sound volume - 10)'\n"
+        },
+        {
+          "key" : "s",
+          "label" : "search",
+          "type" : "url",
+          "value" : "raycast://extensions/mattisssa/spotify-player/search"
         }
       ],
       "key" : "m",
@@ -361,6 +392,12 @@
           "label" : "profile",
           "type" : "url",
           "value" : "raycast://extensions/ViGeng/github-profile/show-github-profile"
+        },
+        {
+          "key" : "r",
+          "label" : "repos",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/github/my-latest-repositories"
         }
       ],
       "key" : "g",
