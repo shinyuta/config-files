@@ -48,7 +48,7 @@ scrollback-limit = 524288
 keybind = global:cmd+s=toggle_quick_terminal
 
 # custom-shader = /Users/yutakirihara/.config/ghostty/shaders/bloom.glsl
-custom-shader-animation = true
+custom-shader-animation = false
 
 # Some shaders can be found in this repo, they're usually uploaded to discord
 # https://github.com/hackrmomo/ghostty-shaders
