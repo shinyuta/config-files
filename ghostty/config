@@ -3,8 +3,8 @@ background = 110E15
 foreground = feffff
 
 # ===== Transparency and Blur =====
-background-opacity = 0.5
-background-blur = 15
+background-opacity = 0.7
+background-blur = false
 
 # ===== Selection Colors =====
 selection-background = 444444
@@ -33,7 +33,7 @@ macos-window-shadow = false
 macos-icon = xray
 
 # ===== Window Padding =====
-window-padding-x = 20
+window-padding-x = 10
 window-padding-y = 0
 
 # ===== Font Settings =====
