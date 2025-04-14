@@ -244,12 +244,6 @@
           "value" : "zsh ~/Desktop/scripts/cleanup_storage.sh"
         },
         {
-          "key" : "d",
-          "label" : "downloads",
-          "type" : "command",
-          "value" : "zsh ~/Desktop/scripts/organize_downloads.sh"
-        },
-        {
           "key" : "a",
           "label" : "commit config",
           "type" : "command",
@@ -272,6 +266,25 @@
           ],
           "key" : "r",
           "label" : "rename",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "d",
+              "label" : "delete",
+              "type" : "command",
+              "value" : "zsh ~/Desktop/scripts/delete_downloads.sh"
+            },
+            {
+              "key" : "o",
+              "label" : "organize",
+              "type" : "command",
+              "value" : "zsh ~/Desktop/scripts/organize_downloads.sh"
+            }
+          ],
+          "key" : "d",
+          "label" : "downloads",
           "type" : "group"
         }
       ],
