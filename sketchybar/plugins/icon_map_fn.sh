@@ -11,7 +11,7 @@ function icon_map() {
   "VMware Fusion")
     icon_result=":vmware_fusion:"
     ;;
-  "Alacritty" | "Hyper" | "iTerm2" | "kitty" | "Terminal" | "终端" | "WezTerm")
+  "Alacritty" | "Hyper" | "iTerm2" | "kitty" | "Terminal" | "终端" | "WezTerm" | "Ghostty")
     icon_result=":terminal:"
     ;;
   "Microsoft To Do" | "Things")
@@ -155,7 +155,7 @@ function icon_map() {
   "Final Cut Pro")
     icon_result=":final_cut_pro:"
     ;;
-  "Chromium" | "Google Chrome" | "Google Chrome Canary")
+  "Chromium" | "Google Chrome" | "Google Chrome Canary" | "Dia")
     icon_result=":google_chrome:"
     ;;
   "GitHub Desktop")
@@ -272,8 +272,8 @@ function icon_map() {
   "zoom.us")
     icon_result=":zoom:"
     ;;
-  "Folx")
-    icon_result=":folx:"
+  "Folks")
+    icon_result=":folks:"
     ;;
   "微信")
     icon_result=":wechat:"
