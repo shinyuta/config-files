@@ -21,21 +21,31 @@ if [[ "$SPOTIFY_STATE" == "playing" ]]; then
 fi
 
 # Check if non-Spotify media is playing or if the active app is Dia Browser
+# Check if non-Spotify media is playing or if the active app is Dia Browser
 if [[ "$STATE" == "playing" || "$APP" == "company.thebrowser.dia" ]]; then
   MEDIA="$(echo "$INFO" | jq -r '.title + " - " + .artist')"
 
-  # Use a Dia-specific icon if the app is Dia (adjust as needed)
-  if [[ "$APP" == "company.thebrowser.dia" ]]; then
-      ICON=""  # Replace with Dia-specific icon if desired
-  else
-      ICON=""
+  # If the media string is empty or only a dash, try to use the last stored media
+  if [[ -z "$MEDIA" || "$MEDIA" == " - " ]]; then
+    if [[ -f "$HOME/.config/sketchybar/last_media.txt" && -s "$HOME/.config/sketchybar/last_media.txt" ]]; then
+      MEDIA="$(cat "$HOME/.config/sketchybar/last_media.txt")"
+    fi
   fi
 
-  update_media "$MEDIA" "$ACCENT_COLOR" "$ICON"
+  # Only update the media if there is a non-empty string
+  if [[ -n "$MEDIA" ]]; then
+    if [[ "$APP" == "company.thebrowser.dia" ]]; then
+      ICON=""  # Replace with Dia-specific icon if desired
+    else
+      ICON=""
+    fi
 
-  # Store the last known playing media to prevent disappearing issue
-  echo "$MEDIA" > "$HOME/.config/sketchybar/last_media.txt"
-  echo "$APP" > "$HOME/.config/sketchybar/last_media_app.txt"
+    update_media "$MEDIA" "$ACCENT_COLOR" "$ICON"
+
+    # Store the last known playing media to prevent disappearing issues
+    echo "$MEDIA" > "$HOME/.config/sketchybar/last_media.txt"
+    echo "$APP" > "$HOME/.config/sketchybar/last_media_app.txt"
+  fi
   exit 0
 fi
 

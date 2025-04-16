@@ -55,6 +55,12 @@
           "label" : "bookmark",
           "type" : "url",
           "value" : "raycast://extensions/lardissone/raindrop-io/search"
+        },
+        {
+          "key" : "d",
+          "label" : "dia",
+          "type" : "application",
+          "value" : "/Applications/Dia.app"
         }
       ],
       "key" : "o",
@@ -409,6 +415,31 @@
       ],
       "key" : "g",
       "label" : "github",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "g",
+          "label" : "github",
+          "type" : "url",
+          "value" : "https://github.com/shinyuta"
+        },
+        {
+          "key" : "y",
+          "label" : "youtube",
+          "type" : "url",
+          "value" : "https://www.youtube.com/"
+        },
+        {
+          "key" : "a",
+          "label" : "anime",
+          "type" : "url",
+          "value" : "https://aniwave.best/home"
+        }
+      ],
+      "key" : "l",
+      "label" : "link",
       "type" : "group"
     }
   ],
