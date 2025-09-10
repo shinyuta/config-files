@@ -157,6 +157,10 @@ if.app-id = 'app.zen-browser.zen'
 run = "move-node-to-workspace 1"
 
 [[on-window-detected]]
+if.app-id = 'com.vivaldi.Vivaldi'
+run = "move-node-to-workspace 1"
+
+[[on-window-detected]]
 if.app-id = 'company.thebrowser.dia'
 run = "move-node-to-workspace 1"
 
@@ -185,11 +189,19 @@ if.app-id = 'com.apple.mail'
 run = "move-node-to-workspace 4"
 
 [[on-window-detected]]
+if.app-id = 'com.rstudio.desktop'
+run = "move-node-to-workspace 4"
+
+[[on-window-detected]]
 if.app-id = 'com.apple.mobilecal'
 run = "move-node-to-workspace 4"
 
 [[on-window-detected]]
 if.app-id = 'com.smartcodeltd.stremio'
+run = "move-node-to-workspace 5"
+
+[[on-window-detected]]
+if.app-id = 'org.nicotine_plus.Nicotine'
 run = "move-node-to-workspace 5"
 
 [[on-window-detected]]

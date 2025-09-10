@@ -1,0 +1,310 @@
+directory: /Volumes/ROCKBOX/Organized
+library: /Volumes/ROCKBOX/musiclibrary.db
+
+import:
+  move: yes
+  write: yes
+  resume: ask
+  incremental: no
+  quiet: yes
+  quiet_fallback: asis
+  timid: no
+  default_action: apply
+
+match:
+  strong_rec_thresh: 0.15 # >=85% similarity auto-accept
+  medium_rec_thresh: 0.30 # >=70% similarity auto-accept
+
+plugins:
+  inline fetchart embedart ftintitle lastgenre scrub smartplaylist duplicates importfeeds playlist discogs
+
+badfiles:  check_on_import: yes  commands:    flac: flac --test --warnings-as-errors --silent    mp3: mp3val -f -nb
+duplicates:
+  album: no
+  delete: no
+  count: yes
+  path: yes
+
+scrub:
+  auto: yes
+
+item_fields:
+  clean_title: |
+    words = title.split()
+    if not words:
+        return '{:02d}'.format(track)
+    camel = words[0].lower() + ''.join(w.capitalize() for w in words[1:])
+    return '{:02d} {}'.format(track, camel)
+
+paths:
+  default: $albumartist/$album/$clean_title
+  singleton: $albumartist/$album/$clean_title
+  comp: Compilations/$album/$clean_title
+
+fetchart:
+  auto: yes
+  cautious: yes
+  minwidth: 300
+  maxwidth: 1200
+  art_filename: cover
+
+embedart:
+  auto: yes
+  ifempty: no
+  remove_art_file: no
+
+ftintitle:
+  auto: yes
+  drop: no
+  format: "feat. {0}"
+  keep_in_artist: no
+
+discogs:
+  user_token: "mSyfwsnvrbYfDxGebvzaVoidjujtdmTjSBPLMVNz"
+  append_style_genre: yes
+  separator: ", "
+
+lastgenre:
+  auto: yes
+  force: yes
+  canonical: yes
+  fallback: "Unknown"
+  separator: ", "
+  count: 1
+  min_weight: 10
+  prefer_specific: true
+  title_case: yes
+  whitelist: yes
+importfeeds:
+  formats: m3u
+  dir: /Volumes/ROCKBOX/Playlists
+  relative_to: /Volumes/ROCKBOX
+  m3u_name: _new.m3u
+
+playlist:
+  auto: no
+  relative_to: /Volumes/ROCKBOX/Organized
+  playlist_dir: /Volumes/ROCKBOX/Playlists
+  forward_slash: yes
+
+smartplaylist:
+  playlist_dir: /Volumes/ROCKBOX/Playlists
+  relative_to: /Volumes/ROCKBOX
+  forward_slash: yes
+  playlists:
+    - name: "All Music.m3u"
+      query: ""
+
+    - name: "Pop.m3u"
+      query:
+        - genre:Pop
+        - genre:"Dance-Pop"
+        - genre:"Pop Rock"
+        - genre:"Indie Pop"
+        - genre:"Bubblegum Pop"
+        - genre:"Pop Punk"
+        - -genre:Rock
+        - -genre:Metal
+        - -genre:Punk
+        - -genre:"K-Pop"
+        - -genre:"J-Pop"
+
+    - name: "Rock.m3u"
+      query:
+        - genre:Rock
+        - genre:"Hard Rock"
+        - genre:"Classic Rock"
+        - genre:"Progressive Rock"
+        - genre:"Alternative Rock"
+        - genre:"Soft Rock"
+        - genre:"Punk Rock"
+        - genre:"Garage Rock"
+        - genre:"Psychedelic Rock"
+        - genre:"Folk Rock"
+        - genre:"Glam Rock"
+        - -genre:Metal
+        - -genre:Punk
+        - -genre:Pop
+
+    - name: "Alternative.m3u"
+      query:
+        - genre:Alternative
+        - genre:"Alternative Rock"
+        - genre:"Indie Rock"
+        - genre:"Post-Rock"
+        - genre:"Post-Punk"
+        - -genre:Indie
+        - -genre:Pop
+        - -genre:Rock
+
+    - name: "Indie.m3u"
+      query:
+        - genre:Indie
+        - genre:"Indie Pop"
+        - genre:"Indie Rock"
+        - -genre:Alternative
+        - -genre:Pop
+
+    - name: "Metal.m3u"
+      query:
+        - genre:Metal
+        - genre:"Heavy Metal"
+        - genre:"Thrash Metal"
+        - genre:"Death Metal"
+        - genre:"Black Metal"
+        - genre:"Power Metal"
+        - genre:"Progressive Metal"
+        - genre:"Nu Metal"
+        - genre:"Symphonic Metal"
+        - genre:"Metalcore"
+        - -genre:Rock
+        - -genre:Punk
+
+    - name: "Punk.m3u"
+      query:
+        - genre:Punk
+        - genre:"Punk Rock"
+        - genre:"Pop Punk"
+        - genre:"Post-Punk"
+        - -genre:Rock
+        - -genre:Metal
+
+    - name: "Jazz.m3u"
+      query:
+        - genre:Jazz
+        - genre:"Smooth Jazz"
+        - genre:"Vocal Jazz"
+        - genre:"Jazz Fusion"
+        - genre:Bebop
+        - genre:Swing
+        - genre:"Free Jazz"
+
+    - name: "Blues.m3u"
+      query:
+        - genre:Blues
+        - genre:"Delta Blues"
+        - genre:"Electric Blues"
+        - genre:"Chicago Blues"
+        - genre:"Country Blues"
+
+    - name: "Classical.m3u"
+      query:
+        - genre:Classical
+
+    - name: "Electronic.m3u"
+      query:
+        - genre:Electronic
+        - genre:House
+        - genre:Techno
+        - genre:Trance
+        - genre:"Drum and Bass"
+        - genre:Dubstep
+        - genre:Ambient
+        - genre:Downtempo
+        - genre:"Trip Hop"
+        - genre:"Progressive House"
+
+    - name: "Dance.m3u"
+      query:
+        - genre:Dance
+        - genre:"Dance-Pop"
+        - genre:House
+        - genre:Trance
+
+    - name: "Hip-Hop.m3u"
+      query:
+        - genre:"Hip-Hop"
+        - genre:"Hip-Hop/Rap"
+        - genre:Trap
+        - genre:"Boom Bap"
+        - genre:Grime
+        - genre:"Gangsta Rap"
+        - genre:"Conscious Hip Hop"
+        - genre:"Jazz Rap"
+        - genre:"Pop Rap"
+        - -genre:Rap
+        - -genre:Funk
+        - -genre:Soul
+
+    - name: "Rap.m3u"
+      query:
+        - genre:Rap
+        - genre:"Hip-Hop/Rap"
+        - genre:"Pop Rap"
+        - -genre:"Hip-Hop"
+
+    - name: "R&B.m3u"
+      query:
+        - genre:"R&B"
+        - genre:"Neo Soul"
+        - genre:"Contemporary R&B"
+        - genre:Motown
+        - -genre:Soul
+
+    - name: "Soul.m3u"
+      query:
+        - genre:Soul
+        - genre:"Neo Soul"
+        - genre:Motown
+        - -genre:"R&B"
+
+    - name: "Funk.m3u"
+      query:
+        - genre:Funk
+        - genre:"Funk Rock"
+        - genre:"Funk Soul"
+
+    - name: "Country.m3u"
+      query:
+        - genre:Country
+        - genre:Bluegrass
+        - genre:Americana
+        - genre:"Country Rock"
+
+    - name: "Folk.m3u"
+      query:
+        - genre:Folk
+        - genre:"Folk Rock"
+        - genre:"Singer-Songwriter"
+        - genre:Americana
+
+    - name: "Reggae.m3u"
+      query:
+        - genre:Reggae
+        - genre:Dancehall
+        - genre:Ska
+
+    - name: "Latin.m3u"
+      query:
+        - genre:Latin
+        - genre:"Latin Pop"
+        - genre:Salsa
+        - genre:Cumbia
+        - genre:"Bossa Nova"
+
+    - name: "World.m3u"
+      query:
+        - genre:World
+        - genre:Afrobeat
+
+    - name: "Soundtrack.m3u"
+      query:
+        - genre:Soundtrack
+        - genre:Score
+        - genre:Musical
+
+    - name: "K-Pop.m3u"
+      query:
+        - genre:"K-Pop"
+
+    - name: "J-Pop.m3u"
+      query:
+        - genre:"J-Pop"
+
+    - name: "Vocal.m3u"
+      query:
+        - genre:Vocal
+
+    - name: "Instrumental.m3u"
+      query:
+        - genre:Instrumental

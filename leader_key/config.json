@@ -45,16 +45,10 @@
           "value" : "/Applications/Stremio.app"
         },
         {
-          "key" : "o",
-          "label" : "obsidian",
-          "type" : "application",
-          "value" : "/Applications/Obsidian.app"
-        },
-        {
           "key" : "b",
-          "label" : "bookmark",
-          "type" : "url",
-          "value" : "raycast://extensions/lardissone/raindrop-io/search"
+          "label" : "browser",
+          "type" : "application",
+          "value" : "/Applications/Vivaldi.app"
         },
         {
           "key" : "d",
@@ -63,6 +57,7 @@
           "value" : "/Applications/Dia.app"
         }
       ],
+      "iconPath" : "door.right.hand.open",
       "key" : "o",
       "label" : "open",
       "type" : "group"
@@ -169,6 +164,7 @@
           "type" : "group"
         }
       ],
+      "iconPath" : "wrench.adjustable",
       "key" : "t",
       "label" : "tools",
       "type" : "group"
@@ -200,6 +196,7 @@
           "value" : "raycast://extensions/raycast/system/set-volume-to-50"
         }
       ],
+      "iconPath" : "speaker.wave.2.fill",
       "key" : "v",
       "label" : "volume",
       "type" : "group"
@@ -231,6 +228,7 @@
           "value" : "/System/Applications/System Settings.app"
         }
       ],
+      "iconPath" : "gearshape",
       "key" : "s",
       "label" : "system",
       "type" : "group"
@@ -294,6 +292,7 @@
           "type" : "group"
         }
       ],
+      "iconPath" : "applescript",
       "key" : "r",
       "label" : "run",
       "type" : "group"
@@ -329,35 +328,11 @@
           "label" : "volume down",
           "type" : "command",
           "value" : "osascript -e 'tell application \"Spotify\" to set sound volume to (sound volume - 10)'\n"
-        },
-        {
-          "key" : "s",
-          "label" : "search",
-          "type" : "url",
-          "value" : "raycast://extensions/mattisssa/spotify-player/search"
         }
       ],
+      "iconPath" : "music.note",
       "key" : "m",
       "label" : "music",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "key" : "s",
-          "label" : "search",
-          "type" : "url",
-          "value" : "raycast://extensions/KevinBatdorf/obsidian/searchNoteCommand?arguments=%7B%22tagArgument%22%3A%22%22%2C%22searchArgument%22%3A%22%22%7D"
-        },
-        {
-          "key" : "d",
-          "label" : "daily",
-          "type" : "url",
-          "value" : "raycast://extensions/KevinBatdorf/obsidian/dailyNoteCommand"
-        }
-      ],
-      "key" : "b",
-      "label" : "obsidian",
       "type" : "group"
     },
     {
@@ -373,8 +348,15 @@
           "label" : "history",
           "type" : "url",
           "value" : "https://www.youtube.com/feed/history"
+        },
+        {
+          "key" : "p",
+          "label" : "playlists",
+          "type" : "url",
+          "value" : "https://www.youtube.com/feed/playlists"
         }
       ],
+      "iconPath" : "play.rectangle",
       "key" : "y",
       "label" : "youtube",
       "type" : "group"
@@ -394,6 +376,7 @@
           "value" : "raycast://extensions/KevinBatdorf/obsidian/dailyNoteCommand"
         }
       ],
+      "iconPath" : "calendar",
       "key" : "d",
       "label" : "daily",
       "type" : "group"
@@ -411,8 +394,15 @@
           "label" : "repos",
           "type" : "url",
           "value" : "raycast://extensions/raycast/github/my-latest-repositories"
+        },
+        {
+          "key" : "s",
+          "label" : "search",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/github/search-repositories"
         }
       ],
+      "iconPath" : "apple.terminal",
       "key" : "g",
       "label" : "github",
       "type" : "group"
@@ -438,6 +428,7 @@
           "value" : "https://aniwave.best/home"
         }
       ],
+      "iconPath" : "link",
       "key" : "l",
       "label" : "link",
       "type" : "group"
