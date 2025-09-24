@@ -9,12 +9,6 @@
           "value" : "/Applications/Ghostty.app"
         },
         {
-          "key" : "z",
-          "label" : "zen",
-          "type" : "application",
-          "value" : "/Applications/Zen.app"
-        },
-        {
           "key" : "s",
           "label" : "spotify",
           "type" : "application",
