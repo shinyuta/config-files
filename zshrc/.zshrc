@@ -1,5 +1,5 @@
-export PATH=$PATH:/Users/yutakirihara/.spicetify
 export PATH="$(brew --prefix ruby)/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export TERM=xterm-256color
 export LANG=en_US.UTF-8
 
@@ -152,6 +152,7 @@ export BAT_THEME="Monokai Extended Origin"
 export EZA_COLORS="di=38;5;148:ln=38;5;81:*.java=38;5;81:*.css=38;5;81:*.lua=38;5;81:*.class=38;5;81:*.md=38;5;81:*.py=38;5;81"
 alias ls="eza --color=always -G --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias lst="eza --icons=always -1 -T --level=2"
+alias lstn="eza --icons=never -1 -T --level=2"
 alias lsl="eza -l"
 
 # ------ ZOXIDE/CD ------
@@ -162,7 +163,7 @@ alias cd="z"
 export PATH="$HOME/.config/tmuxifier/bin:$PATH"
 alias tmuxk="tmux kill-session"
 alias tmuxa="tmux attach"
-alias tmuxifire="tmuxifier load-session coding"
+alias tmx="tmuxifier load-session coding"
 
 # ------- FUCK --------
 eval $(thefuck --alias)
@@ -244,3 +245,6 @@ precmd() {
     fi
     __prompt_to_bottom_line
 }
+
+# Created by `pipx` on 2025-04-25 15:23:31
+export PATH="$PATH:/Users/yutakirihara/.local/bin"

@@ -30,11 +30,8 @@ minimum-contrast = 2
 # ===== macOS Window Appearance =====
 macos-titlebar-style = hidden
 macos-window-shadow = false
-macos-icon = xray
-
-# ===== quick terminal =====
-quick-terminal-position = top
-quick-terminal-size = 700px,100%
+macos-icon = official
+macos-icon-frame = chrome
 
 # ===== Window Padding =====
 window-padding-x = 10
@@ -47,6 +44,10 @@ font-size = 24
 # ===== Behavior =====
 mouse-hide-while-typing = true
 scrollback-limit = 524288
+
+# ===== quick terminal =====
+quick-terminal-position = top
+quick-terminal-size = 1200px
 
 # ===== KEYBINDS =====
 keybind = global:cmd+s=toggle_quick_terminal
