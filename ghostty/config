@@ -46,8 +46,8 @@ mouse-hide-while-typing = true
 scrollback-limit = 524288
 
 # ===== quick terminal =====
-quick-terminal-position = top
-quick-terminal-size = 1200px
+quick-terminal-position = center
+quick-terminal-size = 75%, 75%
 
 # ===== KEYBINDS =====
 keybind = global:cmd+s=toggle_quick_terminal

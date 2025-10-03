@@ -5,7 +5,7 @@ session_root "~/Desktop"
 if initialize_session "coding"; then
 
   # Create first window "wiki"
-  new_window "wiki"
+  new_window "notes"
   window_root "~/Desktop/wiki"
 
   # Create second window "terminal" and auto-run nvim

@@ -96,12 +96,6 @@
           "value" : "raycast://extensions/raycast/clipboard-history/clipboard-history"
         },
         {
-          "key" : "d",
-          "label" : "delivery",
-          "type" : "url",
-          "value" : "raycast://extensions/halprin/delivery-tracker/track-deliveries"
-        },
-        {
           "actions" : [
             {
               "key" : "s",
@@ -119,12 +113,6 @@
           "key" : "t",
           "label" : "timer",
           "type" : "group"
-        },
-        {
-          "key" : "k",
-          "label" : "kill process",
-          "type" : "url",
-          "value" : "raycast://extensions/rolandleth/kill-process/index"
         },
         {
           "actions" : [
@@ -220,6 +208,12 @@
           "label" : "settings",
           "type" : "application",
           "value" : "/System/Applications/System Settings.app"
+        },
+        {
+          "key" : "k",
+          "label" : "kill",
+          "type" : "url",
+          "value" : "raycast://extensions/rolandleth/kill-process/index"
         }
       ],
       "iconPath" : "gearshape",
@@ -362,12 +356,6 @@
           "label" : "schedule",
           "type" : "url",
           "value" : "raycast://extensions/raycast/calendar/my-schedule"
-        },
-        {
-          "key" : "n",
-          "label" : "daily",
-          "type" : "url",
-          "value" : "raycast://extensions/KevinBatdorf/obsidian/dailyNoteCommand"
         }
       ],
       "iconPath" : "calendar",
