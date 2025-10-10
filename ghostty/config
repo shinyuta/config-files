@@ -46,7 +46,7 @@ mouse-hide-while-typing = true
 scrollback-limit = 524288
 
 # ===== quick terminal =====
-quick-terminal-position = center
+quick-terminal-position = bottom
 quick-terminal-size = 75%, 75%
 
 # ===== KEYBINDS =====
