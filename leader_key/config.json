@@ -3,355 +3,6 @@
     {
       "actions" : [
         {
-          "key" : "t",
-          "label" : "ghostty",
-          "type" : "application",
-          "value" : "/Applications/Ghostty.app"
-        },
-        {
-          "key" : "s",
-          "label" : "spotify",
-          "type" : "application",
-          "value" : "/Applications/Spotify.app"
-        },
-        {
-          "key" : "n",
-          "label" : "notes",
-          "type" : "application",
-          "value" : "/System/Applications/Notes.app"
-        },
-        {
-          "key" : "m",
-          "label" : "mail",
-          "type" : "application",
-          "value" : "/System/Applications/Mail.app"
-        },
-        {
-          "key" : "f",
-          "label" : "finder",
-          "type" : "folder",
-          "value" : "/Users/yutakirihara/Downloads"
-        },
-        {
-          "key" : "v",
-          "label" : "stremio",
-          "type" : "application",
-          "value" : "/Applications/Stremio.app"
-        },
-        {
-          "key" : "b",
-          "label" : "browser",
-          "type" : "application",
-          "value" : "/Applications/Vivaldi.app"
-        },
-        {
-          "key" : "d",
-          "label" : "dia",
-          "type" : "application",
-          "value" : "/Applications/Dia.app"
-        }
-      ],
-      "iconPath" : "door.right.hand.open",
-      "key" : "o",
-      "label" : "open",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "key" : "o",
-          "label" : "desktop",
-          "type" : "folder",
-          "value" : "/Users/yutakirihara/Desktop"
-        },
-        {
-          "key" : "c",
-          "label" : "config",
-          "type" : "folder",
-          "value" : "/Users/yutakirihara/.config"
-        },
-        {
-          "key" : "s",
-          "label" : "search",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/file-search/search-files"
-        },
-        {
-          "key" : "d",
-          "label" : "downloads",
-          "type" : "folder",
-          "value" : "/Users/yutakirihara/Downloads"
-        }
-      ],
-      "key" : "f",
-      "label" : "finder",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "key" : "c",
-          "label" : "clipboard",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/clipboard-history/clipboard-history"
-        },
-        {
-          "actions" : [
-            {
-              "key" : "s",
-              "label" : "start",
-              "type" : "url",
-              "value" : "raycast://extensions/ThatNerd/timers/manageTimers"
-            },
-            {
-              "key" : "t",
-              "label" : "terminate",
-              "type" : "url",
-              "value" : "raycast://extensions/ThatNerd/timers/dismissTimerAlert"
-            }
-          ],
-          "key" : "t",
-          "label" : "timer",
-          "type" : "group"
-        },
-        {
-          "actions" : [
-            {
-              "key" : "c",
-              "label" : "coffee",
-              "type" : "url",
-              "value" : "raycast://extensions/mooxl/coffee/caffeinateToggle"
-            },
-            {
-              "key" : "s",
-              "label" : "search",
-              "type" : "url",
-              "value" : "raycast://extensions/nhojb/brew/search"
-            },
-            {
-              "key" : "b",
-              "label" : "brew",
-              "type" : "url",
-              "value" : "raycast://extensions/nhojb/brew/installed"
-            },
-            {
-              "key" : "t",
-              "label" : "toothpick",
-              "type" : "url",
-              "value" : "raycast://extensions/VladCuciureanu/toothpick/manage-bluetooth-connections"
-            }
-          ],
-          "key" : "b",
-          "label" : "brew",
-          "type" : "group"
-        }
-      ],
-      "iconPath" : "wrench.adjustable",
-      "key" : "t",
-      "label" : "tools",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "key" : "m",
-          "label" : "mute",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/system/set-volume-to-0"
-        },
-        {
-          "key" : "u",
-          "label" : "up",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/system/set-volume-to-75"
-        },
-        {
-          "key" : "d",
-          "label" : "down",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/system/set-volume-to-25"
-        },
-        {
-          "key" : "h",
-          "label" : "half",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/system/set-volume-to-50"
-        }
-      ],
-      "iconPath" : "speaker.wave.2.fill",
-      "key" : "v",
-      "label" : "volume",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "key" : "l",
-          "label" : "lock",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/system/lock-screen"
-        },
-        {
-          "key" : "e",
-          "label" : "eject",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/system/eject-all-disks"
-        },
-        {
-          "key" : "t",
-          "label" : "trash",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/system/empty-trash"
-        },
-        {
-          "key" : "s",
-          "label" : "settings",
-          "type" : "application",
-          "value" : "/System/Applications/System Settings.app"
-        },
-        {
-          "key" : "k",
-          "label" : "kill",
-          "type" : "url",
-          "value" : "raycast://extensions/rolandleth/kill-process/index"
-        }
-      ],
-      "iconPath" : "gearshape",
-      "key" : "s",
-      "label" : "system",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "key" : "m",
-          "label" : "maintain",
-          "type" : "command",
-          "value" : "zsh ~/Desktop/scripts/macos_maintenance.sh"
-        },
-        {
-          "key" : "c",
-          "label" : "cleanup",
-          "type" : "command",
-          "value" : "zsh ~/Desktop/scripts/cleanup_storage.sh"
-        },
-        {
-          "key" : "a",
-          "label" : "commit config",
-          "type" : "command",
-          "value" : "zsh ~/Desktop/scripts/auto_commit_config.sh"
-        },
-        {
-          "actions" : [
-            {
-              "key" : "r",
-              "label" : "remove",
-              "type" : "command",
-              "value" : "zsh ~/Desktop/scripts/remove_prefixes.sh\n"
-            },
-            {
-              "key" : "d",
-              "label" : "documents",
-              "type" : "command",
-              "value" : "zsh ~/Desktop/scripts/rename_files.sh"
-            }
-          ],
-          "key" : "r",
-          "label" : "rename",
-          "type" : "group"
-        },
-        {
-          "actions" : [
-            {
-              "key" : "d",
-              "label" : "delete",
-              "type" : "command",
-              "value" : "zsh ~/Desktop/scripts/delete_downloads.sh"
-            },
-            {
-              "key" : "o",
-              "label" : "organize",
-              "type" : "command",
-              "value" : "zsh ~/Desktop/scripts/organize_downloads.sh"
-            }
-          ],
-          "key" : "d",
-          "label" : "downloads",
-          "type" : "group"
-        }
-      ],
-      "iconPath" : "applescript",
-      "key" : "r",
-      "label" : "run",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "key" : "n",
-          "label" : "next",
-          "type" : "command",
-          "value" : "osascript -e 'tell application \"Spotify\" to next track'\n"
-        },
-        {
-          "key" : "p",
-          "label" : "previous",
-          "type" : "command",
-          "value" : "osascript -e 'tell application \"Spotify\" to previous track'\n"
-        },
-        {
-          "key" : "t",
-          "label" : "pause/play",
-          "type" : "command",
-          "value" : "osascript -e 'tell application \"Spotify\" to playpause'\n"
-        },
-        {
-          "key" : "u",
-          "label" : "volume up",
-          "type" : "command",
-          "value" : "osascript -e 'tell application \"Spotify\" to set sound volume to (sound volume + 10)'"
-        },
-        {
-          "key" : "d",
-          "label" : "volume down",
-          "type" : "command",
-          "value" : "osascript -e 'tell application \"Spotify\" to set sound volume to (sound volume - 10)'\n"
-        }
-      ],
-      "iconPath" : "music.note",
-      "key" : "m",
-      "label" : "music",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
-          "key" : "s",
-          "label" : "search",
-          "type" : "url",
-          "value" : "raycast://extensions/tonka3000/youtube/search-videos?arguments=%7B%22query%22%3A%22%22%7D"
-        },
-        {
-          "key" : "h",
-          "label" : "history",
-          "type" : "url",
-          "value" : "https://www.youtube.com/feed/history"
-        },
-        {
-          "key" : "p",
-          "label" : "playlists",
-          "type" : "url",
-          "value" : "https://www.youtube.com/feed/playlists"
-        }
-      ],
-      "iconPath" : "play.rectangle",
-      "key" : "y",
-      "label" : "youtube",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
           "key" : "s",
           "label" : "schedule",
           "type" : "url",
@@ -361,6 +12,37 @@
       "iconPath" : "calendar",
       "key" : "d",
       "label" : "daily",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "c",
+          "label" : "config",
+          "type" : "folder",
+          "value" : "/Users/yutakirihara/.config"
+        },
+        {
+          "key" : "d",
+          "label" : "downloads",
+          "type" : "folder",
+          "value" : "/Users/yutakirihara/Downloads"
+        },
+        {
+          "key" : "o",
+          "label" : "desktop",
+          "type" : "folder",
+          "value" : "/Users/yutakirihara/Desktop"
+        },
+        {
+          "key" : "s",
+          "label" : "search",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/file-search/search-files"
+        }
+      ],
+      "key" : "f",
+      "label" : "finder",
       "type" : "group"
     },
     {
@@ -392,6 +74,12 @@
     {
       "actions" : [
         {
+          "key" : "a",
+          "label" : "anime",
+          "type" : "url",
+          "value" : "https://aniwave.best/home"
+        },
+        {
           "key" : "g",
           "label" : "github",
           "type" : "url",
@@ -402,17 +90,335 @@
           "label" : "youtube",
           "type" : "url",
           "value" : "https://www.youtube.com/"
-        },
-        {
-          "key" : "a",
-          "label" : "anime",
-          "type" : "url",
-          "value" : "https://aniwave.best/home"
         }
       ],
       "iconPath" : "link",
       "key" : "l",
       "label" : "link",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "d",
+          "label" : "volume down",
+          "type" : "command",
+          "value" : "osascript -e 'tell application \"Spotify\" to set sound volume to (sound volume - 10)'\n"
+        },
+        {
+          "key" : "n",
+          "label" : "next",
+          "type" : "command",
+          "value" : "osascript -e 'tell application \"Spotify\" to next track'\n"
+        },
+        {
+          "key" : "p",
+          "label" : "previous",
+          "type" : "command",
+          "value" : "osascript -e 'tell application \"Spotify\" to previous track'\n"
+        },
+        {
+          "key" : "t",
+          "label" : "pause/play",
+          "type" : "command",
+          "value" : "osascript -e 'tell application \"Spotify\" to playpause'\n"
+        },
+        {
+          "key" : "u",
+          "label" : "volume up",
+          "type" : "command",
+          "value" : "osascript -e 'tell application \"Spotify\" to set sound volume to (sound volume + 10)'"
+        }
+      ],
+      "iconPath" : "music.note",
+      "key" : "m",
+      "label" : "music",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "b",
+          "label" : "browser",
+          "type" : "application",
+          "value" : "/Applications/Vivaldi.app"
+        },
+        {
+          "key" : "d",
+          "label" : "dia",
+          "type" : "application",
+          "value" : "/Applications/Dia.app"
+        },
+        {
+          "key" : "f",
+          "label" : "finder",
+          "type" : "folder",
+          "value" : "/Users/yutakirihara/Downloads"
+        },
+        {
+          "key" : "m",
+          "label" : "mail",
+          "type" : "application",
+          "value" : "/System/Applications/Mail.app"
+        },
+        {
+          "key" : "n",
+          "label" : "notes",
+          "type" : "application",
+          "value" : "/System/Applications/Notes.app"
+        },
+        {
+          "key" : "s",
+          "label" : "spotify",
+          "type" : "application",
+          "value" : "/Applications/Spotify.app"
+        },
+        {
+          "key" : "t",
+          "label" : "ghostty",
+          "type" : "application",
+          "value" : "/Applications/Ghostty.app"
+        },
+        {
+          "key" : "v",
+          "label" : "stremio",
+          "type" : "application",
+          "value" : "/Applications/Stremio.app"
+        },
+        {
+          "key" : "j",
+          "label" : "journal",
+          "type" : "application",
+          "value" : "/System/Applications/Journal.app"
+        }
+      ],
+      "iconPath" : "door.right.hand.open",
+      "key" : "o",
+      "label" : "open",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "a",
+          "label" : "commit config",
+          "type" : "command",
+          "value" : "zsh ~/Desktop/scripts/auto_commit_config.sh"
+        },
+        {
+          "key" : "c",
+          "label" : "cleanup",
+          "type" : "command",
+          "value" : "zsh ~/Desktop/scripts/cleanup_storage.sh"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "d",
+              "label" : "delete",
+              "type" : "command",
+              "value" : "zsh ~/Desktop/scripts/delete_downloads.sh"
+            },
+            {
+              "key" : "o",
+              "label" : "organize",
+              "type" : "command",
+              "value" : "zsh ~/Desktop/scripts/organize_downloads.sh"
+            }
+          ],
+          "key" : "d",
+          "label" : "downloads",
+          "type" : "group"
+        },
+        {
+          "key" : "m",
+          "label" : "maintain",
+          "type" : "command",
+          "value" : "zsh ~/Desktop/scripts/macos_maintenance.sh"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "d",
+              "label" : "documents",
+              "type" : "command",
+              "value" : "zsh ~/Desktop/scripts/rename_files.sh"
+            },
+            {
+              "key" : "r",
+              "label" : "remove",
+              "type" : "command",
+              "value" : "zsh ~/Desktop/scripts/remove_prefixes.sh\n"
+            }
+          ],
+          "key" : "r",
+          "label" : "rename",
+          "type" : "group"
+        }
+      ],
+      "iconPath" : "applescript",
+      "key" : "r",
+      "label" : "run",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "e",
+          "label" : "eject",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/eject-all-disks"
+        },
+        {
+          "key" : "k",
+          "label" : "kill",
+          "type" : "url",
+          "value" : "raycast://extensions/rolandleth/kill-process/index"
+        },
+        {
+          "key" : "l",
+          "label" : "lock",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/lock-screen"
+        },
+        {
+          "key" : "s",
+          "label" : "settings",
+          "type" : "application",
+          "value" : "/System/Applications/System Settings.app"
+        },
+        {
+          "key" : "t",
+          "label" : "trash",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/empty-trash"
+        }
+      ],
+      "iconPath" : "gearshape",
+      "key" : "s",
+      "label" : "system",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "actions" : [
+            {
+              "key" : "b",
+              "label" : "brew",
+              "type" : "url",
+              "value" : "raycast://extensions/nhojb/brew/installed"
+            },
+            {
+              "key" : "c",
+              "label" : "coffee",
+              "type" : "url",
+              "value" : "raycast://extensions/mooxl/coffee/caffeinateToggle"
+            },
+            {
+              "key" : "s",
+              "label" : "search",
+              "type" : "url",
+              "value" : "raycast://extensions/nhojb/brew/search"
+            },
+            {
+              "key" : "t",
+              "label" : "toothpick",
+              "type" : "url",
+              "value" : "raycast://extensions/VladCuciureanu/toothpick/manage-bluetooth-connections"
+            }
+          ],
+          "key" : "b",
+          "label" : "brew",
+          "type" : "group"
+        },
+        {
+          "key" : "c",
+          "label" : "clipboard",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/clipboard-history/clipboard-history"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "s",
+              "label" : "start",
+              "type" : "url",
+              "value" : "raycast://extensions/ThatNerd/timers/manageTimers"
+            },
+            {
+              "key" : "t",
+              "label" : "terminate",
+              "type" : "url",
+              "value" : "raycast://extensions/ThatNerd/timers/dismissTimerAlert"
+            }
+          ],
+          "key" : "t",
+          "label" : "timer",
+          "type" : "group"
+        }
+      ],
+      "iconPath" : "wrench.adjustable",
+      "key" : "t",
+      "label" : "tools",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "d",
+          "label" : "down",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/set-volume-to-25"
+        },
+        {
+          "key" : "h",
+          "label" : "half",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/set-volume-to-50"
+        },
+        {
+          "key" : "m",
+          "label" : "mute",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/set-volume-to-0"
+        },
+        {
+          "key" : "u",
+          "label" : "up",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/set-volume-to-75"
+        }
+      ],
+      "iconPath" : "speaker.wave.2.fill",
+      "key" : "v",
+      "label" : "volume",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "h",
+          "label" : "history",
+          "type" : "url",
+          "value" : "https://www.youtube.com/feed/history"
+        },
+        {
+          "key" : "p",
+          "label" : "playlists",
+          "type" : "url",
+          "value" : "https://www.youtube.com/feed/playlists"
+        },
+        {
+          "key" : "s",
+          "label" : "search",
+          "type" : "url",
+          "value" : "raycast://extensions/tonka3000/youtube/search-videos?arguments=%7B%22query%22%3A%22%22%7D"
+        }
+      ],
+      "iconPath" : "play.rectangle",
+      "key" : "y",
+      "label" : "youtube",
       "type" : "group"
     }
   ],

@@ -181,6 +181,10 @@ if.app-id = 'com.apple.Notes'
 run = "move-node-to-workspace 4"
 
 [[on-window-detected]]
+if.app-id = 'com.apple.journal'
+run = "move-node-to-workspace 4"
+
+[[on-window-detected]]
 if.app-id = 'md.obsidian'
 run = "move-node-to-workspace 4"
 
