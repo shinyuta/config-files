@@ -6,8 +6,7 @@ palette = 'custom_palette' # Use custom color palette
 follow_symlinks = true     # Follow symlinks when checking directories
 command_timeout = 5000  # Increase timeout to 5 seconds
 
-# Custom prompt format
-format = """$os($all)$character"""
+format = "$os$directory$git_branch$git_status$character"
 right_format = "$status"
 
 [line_break]
@@ -30,11 +29,6 @@ format = "[on ](fg:main_text)[$symbol$branch]($style) "
 style = "bold fg:main_pink"
 ignore_branches = []
 only_attached = true
-
-# ──────────────────────────────────────────────────────────────
-# Explicitly Disable Git Status
-[git_status]
-disabled = true
 
 # ──────────────────────────────────────────────────────────────
 # Status Indicator (Success / Failure)
@@ -69,3 +63,12 @@ truncate_to_repo = true
 style = "bold fg:neon_blue"
 read_only = " "
 format = "[$path]($style)[$read_only]($read_only_style) "
+
+[git_status]
+disabled = false
+format = "[+](bold fg:neon_blue) "
+ahead = ""
+behind = ""
+diverged = ""
+stashed = ""
+up_to_date = ""
