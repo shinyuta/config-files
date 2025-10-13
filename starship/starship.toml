@@ -65,7 +65,7 @@ read_only = " "
 format = "[$path]($style)[$read_only]($read_only_style) "
 
 [git_status]
-disabled = false
+disabled = true
 format = "[+](bold fg:neon_blue) "
 ahead = ""
 behind = ""
