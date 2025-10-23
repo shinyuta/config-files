@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export WHITE=0xffe0def4
-export DIM=0xff575279
+export DIM=0xff474745
 
 export BAR_COLOR=0x00100f14
 export ITEM_BG_COLOR=0xff393552

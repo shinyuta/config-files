@@ -1,5 +1,6 @@
 # ===== Background and Foreground Colors =====
-background = 110E15
+theme = Black Metal (Venom)
+background = 121212
 foreground = feffff
 
 # ===== Transparency and Blur =====
@@ -38,15 +39,15 @@ window-padding-x = 10
 window-padding-y = 0
 
 # ===== Font Settings =====
-font-family = "Roboto Mono"
-font-size = 24
+font-family = "Pixel Code"
+font-size = 24 #18 on desktop
 
 # ===== Behavior =====
 mouse-hide-while-typing = true
 scrollback-limit = 524288
 
 # ===== quick terminal =====
-quick-terminal-position = bottom
+quick-terminal-position = center
 quick-terminal-size = 75%, 75%
 
 # ===== KEYBINDS =====

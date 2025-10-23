@@ -1,74 +1,36 @@
-"$schema" = 'https://starship.rs/config-schema.json'
+add_newline = true
+command_timeout = 200
+format = "$os [$directory$git_branch$git_status]($style)$character"
 
-# Global Settings
-add_newline = false        # Prevent extra newlines
-palette = 'custom_palette' # Use custom color palette
-follow_symlinks = true     # Follow symlinks when checking directories
-command_timeout = 5000  # Increase timeout to 5 seconds
-
-format = "$os$directory$git_branch$git_status$character"
-right_format = "$status"
-
-[line_break]
-disabled = true
-
-# ──────────────────────────────────────────────────────────────
-# 🎨 Define the Custom Color Palette
-[palettes.custom_palette]
-main_text = "#FDEEFC"   # Light Pink (Text)
-main_pink = "#FD77DD"   # Magenta (Foam)
-neon_blue = "#54C1DB"   # Neon Blue (Gold)
-toxic_green = "#A9DD48" # Toxic Green (Pine)
-error_red = "red"
-
-# ──────────────────────────────────────────────────────────────
-# Git Branch (No Git Status Indicators)
-[git_branch]
-symbol = " "
-format = "[on ](fg:main_text)[$symbol$branch]($style) "
-style = "bold fg:main_pink"
-ignore_branches = []
-only_attached = true
-
-# ──────────────────────────────────────────────────────────────
-# Status Indicator (Success / Failure)
-[status]
-format = '$symbol($style) '  # ✅ Brackets removed
-success_symbol = "✔"
-symbol = ""
-map_symbol = true
-disabled = false
-style = "bold fg:toxic_green"
-
-# ──────────────────────────────────────────────────────────────
-# Unified Character Prompt with Vim Mode Support
-[character]
-success_symbol = "[ ](bold fg:toxic_green) "  # Insert Mode (Toxic Green)
-error_symbol = "[ ](bold fg:error_red) "  # Error (Red)
-vimcmd_symbol = "[ ](bold fg:neon_blue) "  # Normal Mode (Neon Blue)
-vimcmd_visual_symbol = "[ ](bold fg:main_pink) "  # Visual Mode (Main Pink)
-vimcmd_replace_symbol = "[ ](bold fg:main_pink) "  # Replace Mode (Main Pink)
-format = "$symbol"  # Correct way to reference Starship symbols
-
-# ──────────────────────────────────────────────────────────────
-# Left Side Prompt
 [os]
 format = "[󰊠 ]($style)"
-style = "bold fg:main_text"
 disabled = false
 
+[character]
+error_symbol = "[✗](bold cyan)"
+success_symbol = "[❯](bold cyan)"
+
 [directory]
-truncation_length = 3
-truncate_to_repo = true
-style = "bold fg:neon_blue"
-read_only = " "
-format = "[$path]($style)[$read_only]($read_only_style) "
+truncation_length = 2
+truncation_symbol = "…/"
+repo_root_style = "bold cyan"
+repo_root_format = "[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
+
+[git_branch]
+format = "[$branch]($style) "
+style = "italic cyan"
 
 [git_status]
-disabled = true
-format = "[+](bold fg:neon_blue) "
-ahead = ""
-behind = ""
-diverged = ""
-stashed = ""
-up_to_date = ""
+format     = '[$all_status]($style)'
+style      = "cyan"
+ahead      = "⇡${count} "
+diverged   = "⇕⇡${ahead_count}⇣${behind_count} "
+behind     = "⇣${count} "
+conflicted = " "
+up_to_date = " "
+untracked  = "? "
+modified   = " "
+stashed    = ""
+staged     = ""
+renamed    = ""
+deleted    = ""
