@@ -14,8 +14,8 @@ sketchybar --add item time left
 sketchybar --set time \
   icon="󰥔" \
   label="$(date +'%I:%M %p')" \
-  label.color="$ACCENT_COLOR" \
-  icon.color="$ACCENT_COLOR" \
+  label.color="$DIM" \
+  icon.color="$DIM" \
   update_freq=30 \
   script="$PLUGIN_DIR/time.sh" \
   background.drawing=off \
@@ -24,7 +24,7 @@ sketchybar --set time \
   popup.background.color=0xcc000000 \
   popup.drawing=off \
   popup.y_offset=-20 \
-  y_offset=-1
+  y_offset=0
 
 sketchybar --subscribe time mouse.clicked mouse.exited.global
 
@@ -54,7 +54,7 @@ sketchybar --set time.weather \
   script="$PLUGIN_DIR/weather_popup.sh" \
   background.drawing=off \
   background.color=0x00000000 \
-  update_freq=1800   # e.g., update every 30 minutes
+  update_freq=1800 # e.g., update every 30 minutes
 
 # If you want auto-refresh of the weather, subscribe it to routine as well
 sketchybar --subscribe time.weather routine

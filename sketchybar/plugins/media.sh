@@ -43,7 +43,7 @@ if [[ "$STATE" == "playing" || "$APP" == "company.thebrowser.dia" ]]; then
   # Only update if there is a non-empty string
   if [[ -n "$MEDIA" ]]; then
     ICON=""
-    update_media "$MEDIA" "$ACCENT_COLOR" "$ICON"
+    update_media "$MEDIA" "$DIM" "$ICON"
 
     # Store the last known playing media and app
     printf '%s\n' "$MEDIA" > "$HOME/.config/sketchybar/last_media.txt"
@@ -59,7 +59,7 @@ if [[ -f "$HOME/.config/sketchybar/last_media.txt" && -f "$HOME/.config/sketchyb
 
   # Skip if the last app was Spotify (it’s already handled above)
   if [[ "$LAST_APP" != "Spotify" ]]; then
-    update_media "$LAST_MEDIA" "$ACCENT_COLOR" ""
+    update_media "$LAST_MEDIA" "$DIM" ""
     exit 0
   fi
 fi

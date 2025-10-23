@@ -11,5 +11,5 @@ WEATHER="$(curl -s 'wttr.in/55118?format=%C+%t&u')"
 # Set the label to the weather string
 sketchybar --set "$NAME" \
   label="$WEATHER" \
-  label.color="$ACCENT_COLOR" \
-  icon.color="$ACCENT_COLOR"
+  label.color="$DIM" \
+  icon.color="$DIM"

@@ -23,12 +23,12 @@ close_popup_animate() {
     popup.background.color=0xcc000000
 
   sketchybar --set time.popup \
-    label.color="$ACCENT_COLOR" \
-    icon.color="$ACCENT_COLOR"
+    label.color="$DIM" \
+    icon.color="$DIM"
 
   sketchybar --set time.weather \
-    label.color="$ACCENT_COLOR" \
-    icon.color="$ACCENT_COLOR"
+    label.color="$DIM" \
+    icon.color="$DIM"
 }
 
 open_popup_animate() {
@@ -45,8 +45,8 @@ open_popup_animate() {
   sketchybar --animate sin 10 --set "$POPUP_ITEM" popup.y_offset=0
 
   # 4) Ensure child label/icon are pink
-  sketchybar --set time.popup label.color="$ACCENT_COLOR" icon.color="$ACCENT_COLOR"
-  sketchybar --set time.weather label.color="$ACCENT_COLOR" icon.color="$ACCENT_COLOR"
+  sketchybar --set time.popup label.color="$DIM" icon.color="$DIM"
+  sketchybar --set time.weather label.color="$DIM" icon.color="$DIM"
 }
 
 toggle_popup() {
@@ -77,7 +77,7 @@ case "$SENDER" in
     # Update the main time label every 30s
     sketchybar --set "$NAME" \
       label="$(date +'%I:%M %p')" \
-      label.color="$ACCENT_COLOR" \
-      icon.color="$ACCENT_COLOR"
+      label.color="$DIM" \
+      icon.color="$DIM"
     ;;
 esac

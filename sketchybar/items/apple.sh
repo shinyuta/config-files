@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source "$CONFIG_DIR/colors.sh"
+
 # 1) Subscribe all items to mouse.clicked, so we can detect clicks on anything else
 sketchybar --subscribe "/.*/" mouse.clicked
 
@@ -9,7 +11,7 @@ sketchybar --add item apple.logo left
 # 3) Configure the Apple logo with reduced padding
 sketchybar --set apple.logo \
   icon="" \
-  icon.color=0xffffffff \
+  icon.color="$DIM" \
   icon.font="JetBrainsMono Nerd Font:Regular:16.0" \
   background.drawing=off \
   script="$PLUGIN_DIR/apple.sh" \

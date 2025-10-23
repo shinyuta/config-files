@@ -9,7 +9,7 @@ sketchybar --add item ram_avail right
 
 # Configure it
 sketchybar --set ram_avail \
-  icon=  \
+  icon= \
   script="$PLUGIN_DIR/ram.sh" \
   update_freq=2 \
   label="---%" \
