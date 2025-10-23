@@ -1,15 +1,3 @@
-# Jinx Colorscheme Dashboard:
+# Ash themed config (10/22/25)
 
-![images](./RM-images/dashboard.png)
-
-# Ghostty Terminal:
-
-![images](./RM-images/terminal.png)
-
-# Fuzzy Finder:
-
-![images](./RM-images/fzf.png)
-
-# Custom Sketchybar (MacOS):
-
-![images](./RM-images/sketchybar.png)
+![images](./RM-images/desktop.png)
