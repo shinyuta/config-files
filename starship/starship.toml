@@ -3,7 +3,7 @@ command_timeout = 200
 format = "$os [$directory$git_branch$git_status]($style)$character"
 
 [os]
-format = "[󰊠 ]($style)"
+format = "[ ]($style)"
 disabled = false
 
 [character]

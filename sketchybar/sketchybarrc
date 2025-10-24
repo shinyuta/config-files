@@ -14,11 +14,9 @@ default=(
   padding_left=5
   padding_right=5
 
-  # Icons: Use Nerd Font (Regular)
   icon.font="JetBrainsMono Nerd Font:Regular:14.0"
 
-  # Labels: Use standard JetBrains Mono (Medium)
-  label.font="Roboto Mono:Medium:16.0"
+  label.font="Pixel Code:DemiBold:16.0"
 
   icon.color=$DIM
   label.color=$DIM

@@ -13,6 +13,5 @@ sketchybar --set ram_avail \
   script="$PLUGIN_DIR/ram.sh" \
   update_freq=2 \
   label="---%" \
-  label.font="Roboto Mono:Medium:16.0" \
   label.color="$DIM" \
   background.drawing=off

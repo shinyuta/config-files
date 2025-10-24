@@ -12,11 +12,11 @@ fi
 
 # 2) Pick an icon based on the percentage
 case "${PERCENTAGE}" in
-  9[0-9]|100) ICON="" ;;
-  [6-8][0-9]) ICON="" ;;
-  [3-5][0-9]) ICON="" ;;
-  [1-2][0-9]) ICON="" ;;
-  *)          ICON="" ;;
+9[0-9] | 100) ICON="" ;;
+[6-8][0-9]) ICON="" ;;
+[3-5][0-9]) ICON="" ;;
+[1-2][0-9]) ICON="" ;;
+*) ICON="" ;;
 esac
 
 # 3) Determine if charging
@@ -24,8 +24,8 @@ esac
 #    Otherwise, use $DIM color.
 if [[ "$CHARGING" != "" ]]; then
   ICON=""
-  ICON_COLOR="$GREEN"
-  LABEL_COLOR="$GREEN"
+  ICON_COLOR="0xffa9dd48"
+  LABEL_COLOR="0xffa9dd48"
 else
   ICON_COLOR="$DIM"
   LABEL_COLOR="$DIM"

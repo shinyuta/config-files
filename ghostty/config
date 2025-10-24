@@ -38,9 +38,15 @@ macos-icon-frame = chrome
 window-padding-x = 10
 window-padding-y = 0
 
+# ===== Window Padding =====
+window-padding-x = 12
+window-padding-y = 8
+window-padding-balance = true
+
 # ===== Font Settings =====
 font-family = "Pixel Code"
-font-size = 24 #18 on desktop
+#18 on desktop
+font-size = 24
 
 # ===== Behavior =====
 mouse-hide-while-typing = true
