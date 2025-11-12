@@ -13,11 +13,8 @@ sketchybar --bar position=top height=37 blur_radius=30 color=$BAR_COLOR
 default=(
   padding_left=5
   padding_right=5
-
   icon.font="JetBrainsMono Nerd Font:Regular:14.0"
-
   label.font="Pixel Code:DemiBold:16.0"
-
   icon.color=$DIM
   label.color=$DIM
   background.color=$ACCENT_COLOR
@@ -33,18 +30,13 @@ sketchybar --default "${default[@]}"
 # Left side items
 source "$ITEM_DIR/apple.sh"
 source "$ITEM_DIR/time.sh"
-sketchybar --update time time.popup
 source "$ITEM_DIR/aerospace.sh"
 source "$ITEM_DIR/front_app.sh"
-
-# Center items
-source "$ITEM_DIR/media.sh"
 
 # Right side items
 source "$ITEM_DIR/battery.sh"
 source "$ITEM_DIR/volume.sh"
 source "$ITEM_DIR/cpu.sh"
 source "$ITEM_DIR/ram.sh"
-# source "$ITEM_DIR/net.sh"
 
 sketchybar --update

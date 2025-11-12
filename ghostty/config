@@ -3,6 +3,12 @@ theme = Black Metal (Venom)
 background = 121212
 foreground = feffff
 
+# ===== Window Padding =====
+window-padding-x = 12
+window-padding-y = 12
+window-padding-balance = true
+window-padding-color = extend-always
+
 # ===== Transparency and Blur =====
 background-opacity = 0.7
 background-blur = false
@@ -13,6 +19,7 @@ selection-foreground = feffff
 
 # ===== Cursor Appearance =====
 cursor-style = block
+cursor-opacity = 0.7
 cursor-style-blink = true
 cursor-invert-fg-bg = true
 cursor-color = feffff
@@ -34,18 +41,8 @@ macos-window-shadow = false
 macos-icon = official
 macos-icon-frame = chrome
 
-# ===== Window Padding =====
-window-padding-x = 10
-window-padding-y = 0
-
-# ===== Window Padding =====
-window-padding-x = 12
-window-padding-y = 8
-window-padding-balance = true
-
 # ===== Font Settings =====
 font-family = "Pixel Code"
-#18 on desktop
 font-size = 24
 
 # ===== Behavior =====
@@ -60,10 +57,12 @@ quick-terminal-size = 75%, 75%
 keybind = global:cmd+s=toggle_quick_terminal
 
 # custom-shader = /Users/yutakirihara/.config/ghostty/shaders/bloom.glsl
-custom-shader-animation = false
+custom-shader-animation = always
 
 # Some shaders can be found in this repo, they're usually uploaded to discord
 # https://github.com/hackrmomo/ghostty-shaders
+custom-shader = shaders/cursor_tail.glsl
+# custom-shader = shaders/cursor_warp.glsl
 # custom-shader = shaders/scanline.glsl
 # custom-shader = shaders/galaxy.glsl
 # custom-shader = shaders/in-game-crt.glsl

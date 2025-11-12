@@ -60,36 +60,10 @@
     {
       "actions" : [
         {
-          "key" : "a",
-          "label" : "anime",
-          "type" : "url",
-          "value" : "https://aniwave.best/home"
-        },
-        {
-          "key" : "g",
-          "label" : "github",
-          "type" : "url",
-          "value" : "https://github.com/shinyuta"
-        },
-        {
-          "key" : "y",
-          "label" : "youtube",
-          "type" : "url",
-          "value" : "https://www.youtube.com/"
-        }
-      ],
-      "iconPath" : "link",
-      "key" : "l",
-      "label" : "link",
-      "type" : "group"
-    },
-    {
-      "actions" : [
-        {
           "key" : "b",
           "label" : "browser",
           "type" : "application",
-          "value" : "/Applications/Vivaldi.app"
+          "value" : "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
         },
         {
           "key" : "f",
@@ -98,34 +72,10 @@
           "value" : "/Users/yutakirihara/Downloads"
         },
         {
-          "key" : "m",
-          "label" : "mail",
-          "type" : "application",
-          "value" : "/System/Applications/Mail.app"
-        },
-        {
-          "key" : "n",
-          "label" : "notes",
-          "type" : "application",
-          "value" : "/System/Applications/Notes.app"
-        },
-        {
           "key" : "t",
-          "label" : "ghostty",
+          "label" : "terminal",
           "type" : "application",
           "value" : "/Applications/Ghostty.app"
-        },
-        {
-          "key" : "v",
-          "label" : "stremio",
-          "type" : "application",
-          "value" : "/Applications/Stremio.app"
-        },
-        {
-          "key" : "j",
-          "label" : "journal",
-          "type" : "application",
-          "value" : "/System/Applications/Journal.app"
         }
       ],
       "iconPath" : "door.right.hand.open",
